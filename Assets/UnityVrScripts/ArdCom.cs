@@ -5,32 +5,29 @@ using UnityEngine;
 using System.IO.Ports;
 using System.Text.RegularExpressions;
 namespace UnityVRScripts {
-
     
-    public class ArdCom : MonoBehaviour {
+    public static class ArdCom {
         // Start is called before the first frame update
-        public String arduinoPort;
-        public bool useArdunio;
+        public static String arduinoPort;
+        public static bool useArdunio;
 
-        public bool leftRelayStatus = false;
-        public bool rightRelayStatus = false;
+        public static bool leftRelayStatus = false;
+        public static bool rightRelayStatus = false;
         
-        private SerialPort serialPortStream;
+        private static SerialPort serialPortStream;
 
-        void Start() {
-            if (useArdunio)
-            {
-                serialPortStream = new SerialPort(arduinoPort, 9600);
-                serialPortStream.Open(); 
-            }
-            else {
-                Debug.Log("Ard is not enabled");
-            }
+        public static void Init(String arduinoPort) {
+            ArdCom.arduinoPort = arduinoPort;
+            
+            serialPortStream = new SerialPort(arduinoPort, 9600);
+            serialPortStream.Open();
+
+            useArdunio = true;
 
             TurnAllRelaysOff();
         }
 
-        public void SendToArduino (String message) {
+        public static void SendToArduino (String message) {
             
             // // register the event
             // port.DataReceived += Port_DataReceived;
@@ -50,29 +47,29 @@ namespace UnityVRScripts {
             }
         }
 
-        public void TurnAllRelaysOff() {
+        public static void TurnAllRelaysOff() {
             LeftRelayOff();
             RightRelayOff();
         }
-        public void TurnAllRelaysOn() {
+        public static void TurnAllRelaysOn() {
             LeftRelayOn();
             RightRelayOn();
         }
-        public void LeftRelayOn() {
+        public static void LeftRelayOn() {
             leftRelayStatus = true;
             SendToArduino("01");
         }
 
-        public void LeftRelayOff() {
+        public static void LeftRelayOff() {
             leftRelayStatus = false;
             SendToArduino("00");
         }
-        public void RightRelayOn() {
+        public static void RightRelayOn() {
             rightRelayStatus = true;
             SendToArduino("11");
         }
 
-        public void RightRelayOff() {
+        public static void RightRelayOff() {
             rightRelayStatus = false;
             SendToArduino("10");
         }

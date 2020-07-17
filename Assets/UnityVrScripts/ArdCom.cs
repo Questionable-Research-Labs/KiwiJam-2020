@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO.Ports;
 using System.Text.RegularExpressions;
+using System.Threading;
+
 namespace UnityVRScripts {
     
     public static class ArdCom {
@@ -72,6 +74,14 @@ namespace UnityVRScripts {
         public static void RightRelayOff() {
             rightRelayStatus = false;
             SendToArduino("10");
+        }
+        
+        public static void ShockForTime(int activeMilliSeconds) {
+            new Thread(new ThreadStart(() => {
+                RightRelayOn();
+                System.Threading.Thread.Sleep(activeMilliSeconds);
+                RightRelayOff();
+            })).Start();
         }
     }
 }

@@ -5,7 +5,6 @@ using UnityEngine;
 using System.IO.Ports;
 using System.Text.RegularExpressions;
 namespace UnityVRScripts {
-
     
     public static class ArdCom {
         // Start is called before the first frame update

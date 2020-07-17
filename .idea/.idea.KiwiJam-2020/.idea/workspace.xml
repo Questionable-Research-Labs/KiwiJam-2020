@@ -39,8 +39,8 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/UnityVrScripts/CaveManager.cs" />
         <option value="$PROJECT_DIR$/Assets/UnityVrScripts/ExampleScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/UnityVrScripts/ArdCom.cs" />
         <option value="$PROJECT_DIR$/Assets/UnityVrScripts/ArduinoInitlizer.cs" />
+        <option value="$PROJECT_DIR$/Assets/UnityVrScripts/ArdCom.cs" />
       </list>
     </option>
   </component>
@@ -81,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595023284254</updated>
-      <workItem from="1595023291902" duration="1216000" />
+      <workItem from="1595023291902" duration="1544000" />
     </task>
     <servers />
   </component>

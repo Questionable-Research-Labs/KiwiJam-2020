@@ -13,7 +13,8 @@ namespace UnityVRScripts {
         public Transform door2;
 
         private float _move = 0;
-        private float _slideAmmount;
+        private float _slideAmount;
+        private float _slideDownAmount;
         private static DoorSlide _doorSlide = DoorSlide.STATIONARY;
         
         public static void OpenDoors() {
@@ -24,9 +25,15 @@ namespace UnityVRScripts {
             _doorSlide = DoorSlide.CLOSE;
         }
 
+        public static void ElevatorMoveDown() {
+            _doorSlide = DoorSlide.DOWN;
+        }
+
         private void Start() {
-            _slideAmmount = GetComponent<Transform>().localScale.z / 2;
-            new Thread(new ThreadStart(() => {
+            _slideAmount = GetComponent<Transform>().localScale.z / 2;
+            new Thread(new ThreadStart(() =>
+            {
+                ElevatorMoveDown();
                 Thread.Sleep(2000);
                 OpenDoors();
                 Thread.Sleep(2000);
@@ -35,6 +42,12 @@ namespace UnityVRScripts {
         }
 
         private void Update() {
+            if (_doorSlide == DoorSlide.DOWN)
+            {
+                GetComponent<Transform>().transform.Translate(new Vector3(0f, -7.5f, 0f) * Time.deltaTime);
+                return;
+            }
+
             if (_doorSlide == DoorSlide.STATIONARY) return;
             
             var move = movementSpeed * (Time.deltaTime / 1f);
@@ -44,7 +57,7 @@ namespace UnityVRScripts {
                 move = -move;
             }
 
-            if (Mathf.Abs(_move) > _slideAmmount) {
+            if (Mathf.Abs(_move) > _slideAmount) {
                 _doorSlide = DoorSlide.STATIONARY;
                 _move = 0;
                 return;
@@ -62,6 +75,7 @@ namespace UnityVRScripts {
     }
 
     public enum DoorSlide {
+        DOWN = -2,
         OPEN = -1,
         STATIONARY = 0,
         CLOSE = 1,

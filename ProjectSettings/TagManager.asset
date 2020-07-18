@@ -7,6 +7,8 @@ TagManager:
   - LeftController
   - RightController
   - OuterBox
+  - Bullet
+  - Spider
   layers:
   - Default
   - TransparentFX

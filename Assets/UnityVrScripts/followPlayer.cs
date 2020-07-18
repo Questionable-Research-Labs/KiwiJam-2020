@@ -27,4 +27,8 @@ public class followPlayer : MonoBehaviour
         wayPointPos = new Vector3(wayPoint.transform.position.x, transform.position.y, wayPoint.transform.position.z);
         transform.position = Vector3.MoveTowards(transform.position, wayPointPos, speed * Time.deltaTime);
     }
+
+    public void SpiderDeath() {
+        Destroy(gameObject);
+    }
 }

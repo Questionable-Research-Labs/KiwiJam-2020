@@ -2,7 +2,7 @@ const byte numChars = 32;
 char receivedChars[numChars]; // an array to store the received data
 int lengthOfData;
 boolean newData = false;
-const int relayPins[2] = {2, 3};
+const int relayPins[2] = {3, 2};
 const int ledPins[2]   = {4, 5};
 
 void setup() {  

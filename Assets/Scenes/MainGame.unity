@@ -307,8 +307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee0d16333ca46f6bc25583e154ae8ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arduinoPort: 
-  useArduino: 0
+  arduinoPort: COM5
+  useArduino: 1
 --- !u!1 &577376647
 GameObject:
   m_ObjectHideFlags: 0

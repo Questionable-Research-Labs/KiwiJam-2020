@@ -10,6 +10,8 @@ void setup() {
   while(!Serial){}
   pinMode(relayPins[0], OUTPUT);
   pinMode(relayPins[1], OUTPUT);
+  digitalWrite(relayPins[0], HIGH);
+  digitalWrite(relayPins[1], HIGH);
   pinMode(ledPins[0], OUTPUT);
   pinMode(ledPins[1], OUTPUT);
   Serial.println("Ardunio Serial is on");

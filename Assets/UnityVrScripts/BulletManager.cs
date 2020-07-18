@@ -7,10 +7,6 @@ namespace UnityVRScripts {
     public class BulletManager : MonoBehaviour {
         public float bulletSpeed;
 
-        private void Start() {
-            
-        }
-
         void Update() {
             transform.position += transform.up * Time.deltaTime * bulletSpeed;
         }
@@ -20,6 +16,10 @@ namespace UnityVRScripts {
                 Destroy(gameObject);
                 Debug.Log("Cleaned bullet");
             }
+        }
+
+        private void OnCollisionEnter(Collision other) {
+            Destroy(gameObject);
         }
     }
 }

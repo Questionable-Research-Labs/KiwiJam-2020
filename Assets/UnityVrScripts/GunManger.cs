@@ -18,13 +18,14 @@ namespace UnityVRScripts {
         private bool _triggerHeld = false;
         void Start() {
             grabInteractable = GetComponent<XRGrabInteractable>();
-            grabInteractable.onActivate.AddListener(TriggerChange);
-            grabInteractable.onDeactivate.AddListener(TriggerChange);
+            grabInteractable.onActivate.AddListener(TriggerPress);
+            grabInteractable.onDeactivate.AddListener(TriggerUnpress);
+            grabInteractable.onSelectExit.AddListener(TriggerUnpress);
         }
 
         private void OnDestroy() {
-            grabInteractable.onActivate.RemoveListener(TriggerChange);
-            grabInteractable.onDeactivate.RemoveListener(TriggerChange);
+            grabInteractable.onActivate.RemoveListener(TriggerPress);
+            grabInteractable.onDeactivate.RemoveListener(TriggerUnpress);
         }
 
         private void Update() {
@@ -47,8 +48,11 @@ namespace UnityVRScripts {
             ArdCom.TurnOnRightRelayForDuration(200);
         }
 
-        void TriggerChange(XRBaseInteractor interactor) {
-            _triggerHeld = !_triggerHeld;
+        void TriggerPress(XRBaseInteractor interactor) {
+            _triggerHeld = true;
+        }
+        void TriggerUnpress(XRBaseInteractor interactor) {
+            _triggerHeld = false;
         }
     }
 }

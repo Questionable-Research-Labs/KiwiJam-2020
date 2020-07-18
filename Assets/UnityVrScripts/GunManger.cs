@@ -9,13 +9,13 @@ namespace UnityVRScripts {
     public class GunManger : MonoBehaviour {
         public GameObject bulletPrefab;
         private XRGrabInteractable grabInteractable = null;
-        AudioSource gunChargingAudioSource;
+        public static AudioSource gunChargingAudioSource;
         public int startingPitch = 1;
         public int startingTimeSamples = 1;
         public float gunChargeRate;
-        public float gunMaxCharge;
+        public static float gunMaxCharge;
 
-        public float _currentCharge;
+        public static float _currentCharge;
         
         
 
@@ -25,18 +25,8 @@ namespace UnityVRScripts {
         //Detect when you use the toggle, ensures music isn’t played multiple times
         bool m_ToggleChange;
 
-        private static bool triggerHeld = false;
+        public static bool triggerHeld = false;
 
-        public static void setTriggerHeld(bool val)
-        {
-            GunManager.triggerHeld = val;
-        }
-
-        public static bool getTriggerHeld()
-        {
-            return GunManager.triggerHeld;
-        }
-        
         void Start() {
             grabInteractable = GetComponent<XRGrabInteractable>();
             grabInteractable.onActivate.AddListener(TriggerPress);

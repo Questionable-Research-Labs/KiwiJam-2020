@@ -11,15 +11,15 @@ namespace UnityVRScripts {
         void Start()
         {
             gunChargedAudioSource = GetComponent<AudioSource>();
-            Debug.Log();
+            // Debug.Log();
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (_currentCharge >= gunMaxCharge)
+            if (GunManger._currentCharge >= GunManger.gunMaxCharge)
             {
-                gunChargingAudioSource.Stop();
+                GunManger.gunChargingAudioSource.Stop();
                 gunChargedAudioSource.Play();
             }
         }

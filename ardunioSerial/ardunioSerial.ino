@@ -1,9 +1,9 @@
 const byte numChars = 32;
 char receivedChars[numChars]; // an array to store the received data
 int lengthOfData;
-const int led = 2;
 boolean newData = false;
 const int relayPins[2] = {2,3};
+const int ledPins[2] = {4,5};
 
 void setup() {  
   Serial.begin(9600);
@@ -20,12 +20,15 @@ void loop() {
     Serial.println(receivedChars);
     if (lengthOfData == 2) {
       int relayPin = 0;
+      int ledPin = 0;
       if (receivedChars[0] == '0') {
         Serial.println("Left relay command");
         relayPin = relayPins[0];
+        ledPin = ledPins[0];
       } else if (receivedChars[0] == '1') {
         Serial.println("Right relay command");
         relayPin = relayPins[1];
+        ledPin = ledPins[0];
       } else {
         Serial.println("Unkonwn relay address");
         return;
@@ -33,9 +36,12 @@ void loop() {
       if (receivedChars[1] == '0') {
         Serial.println("Turing Off pin " + String(relayPin));
         digitalWrite(relayPin, HIGH);
+        digitalWrite(ledPin, HIGH);
+        
       } else if (receivedChars[1] == '1') {
         Serial.println("Turing On pin " + String(relayPin));
         digitalWrite(relayPin, LOW);
+        digitalWrite(ledPin, LOW);
       } else {
         Serial.println("Unkonwn relay state");
         return;

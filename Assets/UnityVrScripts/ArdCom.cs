@@ -58,38 +58,52 @@ namespace UnityVRScripts {
             RightRelayOn();
         }
         public static void LeftRelayOn() {
+            if (leftRelayStatus) return;
             leftRelayStatus = true;
             SendToArduino("01");
         }
 
         public static void LeftRelayOff() {
+            if (!leftRelayStatus) return;
             leftRelayStatus = false;
             SendToArduino("00");
         }
         public static void RightRelayOn() {
+            if (rightRelayStatus) return;
             rightRelayStatus = true;
             SendToArduino("11");
         }
 
         public static void RightRelayOff() {
+            if (!rightRelayStatus) return;
             rightRelayStatus = false;
             SendToArduino("10");
         }
         
         public static void TurnOnRightRelayForDuration(int activeMilliSeconds) {
-            new Thread(new ThreadStart(() => {
+            if (rightRelayStatus) return;
+            new Thread(() => {
                 RightRelayOn();
-                System.Threading.Thread.Sleep(activeMilliSeconds);
+                Thread.Sleep(activeMilliSeconds);
                 RightRelayOff();
-            })).Start();
+            }).Start();
         }
         
         public static void TurnOnLeftRelayForDuration(int activeMilliSeconds) {
-            new Thread(new ThreadStart(() => {
+            if (leftRelayStatus) return;
+            new Thread(() => {
                 LeftRelayOn();
-                System.Threading.Thread.Sleep(activeMilliSeconds);
+                Thread.Sleep(activeMilliSeconds);
                 LeftRelayOff();
-            })).Start();
+            }).Start();
+        }
+
+        public static void TurnOnControllerForDuration(int activeMilliSeconds, GameObject controllerTag  ) {
+            if (controllerTag.CompareTag("LeftController")) {
+                TurnOnLeftRelayForDuration(activeMilliSeconds);
+            } else if (controllerTag.CompareTag("RightController")) {
+                TurnOnRightRelayForDuration(activeMilliSeconds);
+            }
         }
 
         public static void Terminate() {

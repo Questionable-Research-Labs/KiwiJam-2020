@@ -11,6 +11,7 @@ TagManager:
   - Spider
   - TeleportIgnore
   - ExcludeTeleport
+  - TurnOff
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - teleport
   - GrabXR
   - TeleIgnore
-  - 
+  - Wallz
   - 
   - 
   - 

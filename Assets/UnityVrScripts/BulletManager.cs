@@ -27,7 +27,7 @@ namespace UnityVRScripts {
         private void OnCollisionEnter(Collision other) {
             Destroy(gameObject);
             if (other.gameObject.CompareTag("Spider")) {
-                other.gameObject.GetComponent<followPlayer>().SpiderDeath();
+                other.gameObject.GetComponent<SpiderController>().SpiderDeath();
             }
         }
     }

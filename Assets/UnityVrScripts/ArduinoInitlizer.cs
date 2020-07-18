@@ -13,5 +13,13 @@ namespace UnityVRScripts {
         private void OnDestroy() {
             ArdCom.Terminate();
         }
+
+        private void Update() {
+            if (Input.GetKeyDown("space")) {
+                ArdCom.TurnAllRelaysOn();
+            } else {
+                ArdCom.TurnAllRelaysOff();
+            }
+        }
     }
 }

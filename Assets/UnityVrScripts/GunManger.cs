@@ -43,6 +43,7 @@ namespace UnityVRScripts {
             Instantiate(bulletPrefab, transform.position, transform.rotation * Quaternion.Euler(90, 0, 0));
             Debug.Log("Fired Bullet");
             ArdCom.TurnOnRightRelayForDuration(200);
+            var Devices = new List<UnityEngine.XR.InputDevice>();
         }
 
         void TriggerPress(XRBaseInteractor interactor) {

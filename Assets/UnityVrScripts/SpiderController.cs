@@ -69,6 +69,7 @@ public class SpiderController : MonoBehaviour
     }
 
     public void SpiderDeath() {
+        hudUpdater.increassScore(100);
         Destroy(gameObject);
     }
 
@@ -81,6 +82,7 @@ public class SpiderController : MonoBehaviour
         if ((other.gameObject.CompareTag("LeftController") || other.gameObject.CompareTag("RightController")) && Time.time - lastLatch >= timeBetweenLatches) {
             jumped = true;
             latched = true;
+            hudUpdater.decreaseHealth(-1);
             latchedObject = other.gameObject;
             latchedTime = Time.time;
             rb.useGravity = false;

@@ -35,6 +35,10 @@ namespace UnityVRScripts {
             if (currentlySpawning && Time.time - lastSpawnTime > spiderSpawnDelay) {
                 SpawnSpider();
                 lastSpawnTime = Time.time;
+                spiderCount++;
+                if (spiderCount >= waveSpiderAmounts[currentWave]) {
+                    currentlySpawning = false;
+                }
             } else if (spiderCount <= 1 && Time.time - lastWaveTime > waveSpiderTimes[currentWave]) {
                 currentlySpawning = true;
                 lastWaveTime = Time.time;

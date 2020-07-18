@@ -22,11 +22,16 @@ public class SpiderController : MonoBehaviour
     private Rigidbody rb;
     private bool jumped = false;
 
-    private bool latched = false;
-    private GameObject latchedObject = null;
-    private float latchedTime = 0;
+    public bool latched = false;
+    public GameObject latchedObject = null;
+    public float latchedTime = 0;
+    public float timeBetweenLatches;
+    public float lastLatch = 0.0f;
 
     public float latchingTime;
+
+    public float timeBetweenJumps;
+    public float timeLastedJump;
 
     void Start() {
         rb = GetComponent<Rigidbody>();
@@ -45,7 +50,7 @@ public class SpiderController : MonoBehaviour
             objectSelfPos = transform.position;
             wayPointPos = wayPoint.transform.position;
             dist = Vector3.Distance(objectSelfPos, wayPointPos);
-            if (dist <= 1 && !jumped)
+            if (dist <= 1 && !jumped && Time.time - timeLastedJump >= timeBetweenJumps)
             {
                 rb.AddForce(0, 5, 0, ForceMode.Impulse);
                 jumped = !jumped;
@@ -57,9 +62,7 @@ public class SpiderController : MonoBehaviour
             transform.rotation = Quaternion.Euler(new Vector3(0.0f,0.0f,0.0f));
             rb.velocity = Vector3.zero;
             if (Time.time - latchedTime >= latchingTime) {
-                latched = false;
-                ArdCom.TurnOnControllerForDuration(100, latchedObject.gameObject);
-                rb.useGravity = true;
+                UnlatchSpider(latchedObject.gameObject);
             }
         }
 
@@ -71,10 +74,11 @@ public class SpiderController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision) {
         jumped = false;
+        timeLastedJump = Time.time;
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.CompareTag("LeftController")) {
+        if ((other.gameObject.CompareTag("LeftController") || other.gameObject.CompareTag("RightController")) && Time.time - lastLatch >= timeBetweenLatches) {
             jumped = true;
             latched = true;
             latchedObject = other.gameObject;
@@ -83,12 +87,17 @@ public class SpiderController : MonoBehaviour
         }
     }
     private void OnTriggerExit(Collider other) {
-        if (other.gameObject.CompareTag("LeftController")) {
+        if (other.gameObject.CompareTag("LeftController") || other.gameObject.CompareTag("RightController")) {
             if (latched) {
-                latched = false;
-                ArdCom.TurnOnControllerForDuration(100, other.gameObject);
-                rb.useGravity = true;
+                UnlatchSpider(other.gameObject);
             }
         }
+    }
+
+    private void UnlatchSpider(GameObject controlller) {
+        latched = false;
+        ArdCom.TurnOnControllerForDuration(100, controlller);
+        rb.useGravity = true;
+        lastLatch = Time.time;
     }
 }

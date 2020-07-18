@@ -124,6 +124,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 825675c0f785b5a4d98e70fb170b6fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  latched: 0
+  latchedObject: {fileID: 0}
+  latchedTime: 0
+  timeBetweenLatches: 4
+  lastLatch: 0
+  latchingTime: 2
+  timeBetweenJumps: 2
+  timeLasedJump: 0
 --- !u!114 &5568347645065833586
 MonoBehaviour:
   m_ObjectHideFlags: 0

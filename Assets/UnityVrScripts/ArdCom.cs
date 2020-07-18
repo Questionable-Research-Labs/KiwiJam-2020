@@ -92,6 +92,14 @@ namespace UnityVRScripts {
             })).Start();
         }
 
+        public static void TurnOnControllerForDuration(int activeMilliSeconds, GameObject controllerTag  ) {
+            if (controllerTag.CompareTag("LeftController")) {
+                TurnOnLeftRelayForDuration(activeMilliSeconds);
+            } else if (controllerTag.CompareTag("RightController")) {
+                TurnOnRightRelayForDuration(activeMilliSeconds);
+            }
+        }
+
         public static void Terminate() {
             if (useArdunio)
             {

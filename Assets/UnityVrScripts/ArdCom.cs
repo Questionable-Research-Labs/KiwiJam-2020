@@ -93,7 +93,10 @@ namespace UnityVRScripts {
         }
 
         public static void Terminate() {
-            serialPortStream.Close();
+            if (useArdunio)
+            {
+                serialPortStream.Close();
+            }
         }
     }
 }

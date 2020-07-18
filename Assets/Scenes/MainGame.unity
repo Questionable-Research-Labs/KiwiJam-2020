@@ -1693,7 +1693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6895535676534937961, guid: 11c6909124c7da14eb0f945906ea771e,
     type: 3}
-  gunChargeRate: 0.4
+  gunChargeRate: 0.8
   gunMaxCharge: 1
   _currentCharge: 0
 --- !u!1 &1328841771

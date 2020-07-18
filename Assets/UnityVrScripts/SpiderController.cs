@@ -56,6 +56,7 @@ public class SpiderController : MonoBehaviour
                 jumped = !jumped;
             }
             transform.position = Vector3.MoveTowards(transform.position, wayPointPos, speed * Time.deltaTime);
+            transform.LookAt(wayPoint.transform);
         }
         else {
             transform.position = latchedObject.transform.position;

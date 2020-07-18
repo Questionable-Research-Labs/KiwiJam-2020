@@ -9,7 +9,7 @@ namespace UnityVRScripts {
 
         private void Start() {
             for (int i = 0; i < 2; i++) {
-                Instantiate(spiderPrefab, new Vector3(UnityEngine.Random.Range(-10.0f, 10.0f), 1.0f, UnityEngine.Random.Range(-10.0f, 10.0f)),Quaternion.identity );
+                Instantiate(spiderPrefab, new Vector3(UnityEngine.Random.Range(3.0f, 8.0f), -3.0f, UnityEngine.Random.Range(-10.0f, 10.0f)),Quaternion.identity );
             }
         }
     }

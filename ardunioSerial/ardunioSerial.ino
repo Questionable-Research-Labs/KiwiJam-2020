@@ -2,14 +2,16 @@ const byte numChars = 32;
 char receivedChars[numChars]; // an array to store the received data
 int lengthOfData;
 boolean newData = false;
-const int relayPins[2] = {2,3};
-const int ledPins[2] = {4,5};
+const int relayPins[2] = {2, 3};
+const int ledPins[2]   = {4, 5};
 
 void setup() {  
   Serial.begin(9600);
   while(!Serial){}
   pinMode(relayPins[0], OUTPUT);
   pinMode(relayPins[1], OUTPUT);
+  pinMode(ledPins[0], OUTPUT);
+  pinMode(ledPins[1], OUTPUT);
   Serial.println("Ardunio Serial is on");
 }
 
@@ -28,7 +30,7 @@ void loop() {
       } else if (receivedChars[0] == '1') {
         Serial.println("Right relay command");
         relayPin = relayPins[1];
-        ledPin = ledPins[0];
+        ledPin = ledPins[1];
       } else {
         Serial.println("Unkonwn relay address");
         return;
@@ -36,12 +38,12 @@ void loop() {
       if (receivedChars[1] == '0') {
         Serial.println("Turing Off pin " + String(relayPin));
         digitalWrite(relayPin, HIGH);
-        digitalWrite(ledPin, HIGH);
+        digitalWrite(ledPin, LOW);
         
       } else if (receivedChars[1] == '1') {
         Serial.println("Turing On pin " + String(relayPin));
         digitalWrite(relayPin, LOW);
-        digitalWrite(ledPin, LOW);
+        digitalWrite(ledPin, HIGH);
       } else {
         Serial.println("Unkonwn relay state");
         return;

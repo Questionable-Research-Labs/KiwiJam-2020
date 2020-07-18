@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.1/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.1/resharper-host/local/Transient/ReSharperHost/v201/SolutionCaches/_KiwiJam-2020.458796792.00" t="ExcludeRecursive" />
-    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+    <e p="C:\Users\Jasper\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Jasper\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_KiwiJam-2020.-2110214512.00" t="ExcludeRecursive" />
+    <e p="D:\KiwiJam-2020" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Shaders" t="Include">
-          <e p="Unlit-Line-Opaque.shader" t="Include" />
           <e p="pulsingEffectShader.shader" t="Include" />
+          <e p="Unlit-Line-Opaque.shader" t="Include" />
         </e>
         <e p="UnityVrScripts" t="Include">
           <e p="ArdCom.cs" t="Include" />
           <e p="ArduinoInitlizer.cs" t="Include" />
-          <e p="BulletMovement.cs" t="Include" />
+          <e p="BulletManager.cs" t="Include" />
           <e p="ControllerManager.cs" t="Include" />
+          <e p="followPlayer.cs" t="Include" />
           <e p="GunManger.cs" t="Include" />
           <e p="NonVRMovment.cs" t="Include" />
+          <e p="SpiderSpawner.cs" t="Include" />
         </e>
       </e>
       <e p="KiwiJam-2020.sln" t="IncludeFlat" />
-      <e p="Temp/bin" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
-      <e p="packages" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>
 </project>

@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="41a63940-8dbb-4ba4-8853-69e1600ac7a0" name="Default Changelist" comment="" />
+    <list default="true" id="e57ca17f-3812-4460-8405-4169a7e22c10" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,22 +13,25 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2C24F0C1-857D-4078-B6D4-53F88E061A29/66/bbbdea19/Boolean.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/ArdCom.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/ArduinoInitlizer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/ControllerManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/SpiderSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/GunManger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/BulletManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/followPlayer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/UnityVrScripts/CaveManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/UnityVrScripts/ExampleScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/UnityVrScripts/ArduinoInitlizer.cs" />
-        <option value="$PROJECT_DIR$/Assets/UnityVrScripts/ArdCom.cs" />
+        <option value="$PROJECT_DIR$/Assets/UnityVrScripts/BulletMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/UnityVrScripts/ControllerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/UnityVrScripts/BulletManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/UnityVrScripts/GunManger.cs" />
+        <option value="$PROJECT_DIR$/Assets/UnityVrScripts/followPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/UnityVrScripts/SpiderSpawner.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1epf6yJ5G5507jVfu592t0zutgk" />
+  <component name="ProjectId" id="1ephNf0Q6xlGXW1cltT1u7pN53C" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -55,7 +42,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -76,12 +69,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="41a63940-8dbb-4ba4-8853-69e1600ac7a0" name="Default Changelist" comment="" />
-      <created>1595023284254</created>
+      <changelist id="e57ca17f-3812-4460-8405-4169a7e22c10" name="Default Changelist" comment="" />
+      <created>1595024403631</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1595023284254</updated>
-      <workItem from="1595023291902" duration="4111000" />
+      <updated>1595024403631</updated>
+      <workItem from="1595024414616" duration="623000" />
     </task>
     <servers />
   </component>
@@ -91,23 +84,19 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1986" y="247" key="run.anything.popup" timestamp="1595024086644">
-      <screen x="1366" y="0" width="1920" height="1080" />
+    <state x="781" y="350" key="SettingsEditor" timestamp="1595029951825">
+      <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state x="1986" y="247" key="run.anything.popup/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1595024086644" />
+    <state x="781" y="350" key="SettingsEditor/0.0.2560.1410@0.0.2560.1410" timestamp="1595029951825" />
+    <state x="943" y="317" width="672" height="678" key="search.everywhere.popup" timestamp="1595028418101">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="943" y="317" width="672" height="678" key="search.everywhere.popup/0.0.2560.1410@0.0.2560.1410" timestamp="1595028418101" />
   </component>
 </project>

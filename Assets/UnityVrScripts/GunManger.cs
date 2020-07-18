@@ -44,6 +44,7 @@ namespace UnityVRScripts {
         void FireBullet() {
             Instantiate(bulletPrefab, transform.position, transform.rotation * Quaternion.Euler(90, 0, 0));
             Debug.Log("Fired Bullet");
+            ArdCom.TurnOnRightRelayForDuration(200);
         }
 
         void TriggerChange(XRBaseInteractor interactor) {

@@ -8,7 +8,7 @@ public class followPlayer : MonoBehaviour
     private GameObject wayPoint;
     private Vector3 wayPointPos;
     //  I am speeed vvvvvv
-    private float speed = 6.0f;
+    private float speed = 1.5f;
     void Start()
     {
         if (Random.Range(0, 2) == 0)

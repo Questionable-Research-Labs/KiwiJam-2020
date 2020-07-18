@@ -31,10 +31,7 @@ namespace UnityVRScripts {
         private void Update() {
             if (_triggerHeld) {
                 _currentCharge += gunChargeRate * Time.deltaTime;
-                if (_currentCharge >= gunMaxCharge) {
-                    FireBullet();
-                    _currentCharge = 0.0f;
-                }
+
             }
             else if (_currentCharge>0) {
                 _currentCharge -= gunChargeRate * Time.deltaTime;

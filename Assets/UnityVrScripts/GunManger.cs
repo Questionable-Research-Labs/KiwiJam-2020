@@ -53,6 +53,10 @@ namespace UnityVRScripts {
         }
         void TriggerUnpress(XRBaseInteractor interactor) {
             _triggerHeld = false;
+            if (_currentCharge >= gunMaxCharge) {
+                FireBullet();
+                _currentCharge = 0.0f;
+            }
         }
     }
 }

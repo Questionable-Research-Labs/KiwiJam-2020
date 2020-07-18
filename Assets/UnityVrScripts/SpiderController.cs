@@ -54,8 +54,12 @@ public class SpiderController : MonoBehaviour
         }
         else {
             transform.position = latchedObject.transform.position;
+            transform.rotation = Quaternion.Euler(new Vector3(0.0f,0.0f,0.0f));
+            rb.velocity = Vector3.zero;
             if (Time.time - latchedTime >= latchingTime) {
                 latched = false;
+                ArdCom.TurnOnControllerForDuration(100, latchedObject.gameObject);
+                rb.useGravity = true;
             }
         }
 
@@ -71,16 +75,19 @@ public class SpiderController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("LeftController")) {
+            jumped = true;
             latched = true;
             latchedObject = other.gameObject;
             latchedTime = Time.time;
+            rb.useGravity = false;
         }
     }
     private void OnTriggerExit(Collider other) {
         if (other.gameObject.CompareTag("LeftController")) {
             if (latched) {
                 latched = false;
-                
+                ArdCom.TurnOnControllerForDuration(100, other.gameObject);
+                rb.useGravity = true;
             }
         }
     }

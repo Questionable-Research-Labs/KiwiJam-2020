@@ -20,18 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57ca17f-3812-4460-8405-4169a7e22c10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/New Terrain 1.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/New Terrain 1.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Elevator.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Elevator.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityVrScripts/OpenElevator.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KiwiJam-2020/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KiwiJam-2020/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.KiwiJam-2020/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KiwiJam-2020/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KiwiJam-2020/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KiwiJam-2020/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Elevator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Elevator.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityVrScripts/NonVRMovment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityVrScripts/NonVRMovment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityVrScripts/OpenElevator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityVrScripts/OpenElevator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityVrScripts/SpiderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityVrScripts/SpiderController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityVrScripts/hudUpdater.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityVrScripts/hudUpdater.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,14 +37,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/followPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/hudUpdater.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/OpenElevator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/ArduinoInitlizer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/SpiderController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/ArdCom.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/BulletManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/GunManger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/SpiderSpawner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/ArdCom.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/NonVRMovment.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/ArduinoInitlizer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/OpenElevator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/SpiderSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/ControllerManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -62,6 +58,8 @@
         <option value="$PROJECT_DIR$/Assets/UnityVrScripts/GunManger.cs" />
         <option value="$PROJECT_DIR$/Assets/UnityVrScripts/SpiderSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/UnityVrScripts/NonVRMovment.cs" />
+        <option value="$PROJECT_DIR$/Assets/UnityVrScripts/hudUpdater.cs" />
+        <option value="$PROJECT_DIR$/Assets/UnityVrScripts/SpiderController.cs" />
         <option value="$PROJECT_DIR$/Assets/UnityVrScripts/OpenElevator.cs" />
       </list>
     </option>
@@ -102,6 +100,7 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -114,11 +113,12 @@
       <updated>1595024403631</updated>
       <workItem from="1595024414616" duration="623000" />
       <workItem from="1595049409934" duration="4452000" />
+      <workItem from="1595061769900" duration="3103000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />

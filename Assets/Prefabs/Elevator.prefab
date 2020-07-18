@@ -31,8 +31,8 @@ Transform:
   m_LocalPosition: {x: 3, y: 0, z: 3}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
-  - {fileID: 5342487703533820887}
   - {fileID: 5342487703945611385}
+  - {fileID: 5342487703533820887}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -109,7 +109,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
-  slideAmmount: 50
   door1: {fileID: 5342487703533820887}
   door2: {fileID: 5342487703945611385}
 --- !u!1 &5342487703533820886
@@ -143,7 +142,7 @@ Transform:
   m_LocalScale: {x: 0.2, y: 1, z: 0.5}
   m_Children: []
   m_Father: {fileID: 5342487702964164872}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5342487703533820882
 MeshFilter:
@@ -236,7 +235,7 @@ Transform:
   m_LocalScale: {x: 0.2, y: 1, z: 0.5}
   m_Children: []
   m_Father: {fileID: 5342487702964164872}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5342487703945611364
 MeshFilter:

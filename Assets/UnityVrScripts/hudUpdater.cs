@@ -9,9 +9,9 @@ namespace UnityVRScripts {
         public static float detectedHealth = 100;
         public static float dangerCompensation = 0;
 
-        public Text dHBox;
-        public Text dCBox;
-        
+        public Text dHBox; //detectedHealth
+        public Text dCBox; //dangerCompensation
+        public Text goBox; //gameoverbox;
 
         void Start() {
             
@@ -24,10 +24,14 @@ namespace UnityVRScripts {
 
         private void OnGUI() {
             dHBox.text = "Detected Health: " + detectedHealth + "%";
-            dCBox.text = "Danger Compensation: §" + dangerCompensation;
+            dCBox.text = "Danger Compensation: " + dangerCompensation;
+            goBox.text = "";
+            if (detectedHealth <= 0){
+                goBox.text = "Game Over!";
+            }
         }
 
-        public static void increassScore(float amountToChange) {
+        public static void increaseScore(float amountToChange) {
             dangerCompensation+=amountToChange;
         }
 

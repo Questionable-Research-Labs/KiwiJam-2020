@@ -69,7 +69,7 @@ public class SpiderController : MonoBehaviour
     }
 
     public void SpiderDeath() {
-        hudUpdater.increassScore(100);
+        hudUpdater.increaseScore(100);
         Destroy(gameObject);
     }
 

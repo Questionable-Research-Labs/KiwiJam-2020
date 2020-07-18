@@ -6,7 +6,13 @@ using UnityEngine;
 namespace UnityVRScripts {
     public class BulletManager : MonoBehaviour {
         public float bulletSpeed;
+		AudioSource bulletAudioSource;
 
+		void Start() {
+			bulletAudioSource = GetComponent<AudioSource>();
+			bulletAudioSource.Play();
+		}
+	
         void Update() {
             transform.position += transform.up * Time.deltaTime * bulletSpeed;
         }

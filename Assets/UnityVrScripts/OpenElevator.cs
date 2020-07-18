@@ -50,7 +50,7 @@ namespace UnityVRScripts {
 
             if (_doorSlide == DoorSlide.STATIONARY) return;
             
-            var move = movementSpeed * (Time.deltaTime / 1f);
+            var move = movementSpeed * Time.deltaTime;
             _move += move;
             
             if (_doorSlide == DoorSlide.CLOSE) {

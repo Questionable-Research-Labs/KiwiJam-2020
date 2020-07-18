@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -13,8 +14,9 @@ namespace UnityVRScripts {
         public int startingPitch = 1;
         public int startingTimeSamples = 1;
         public float gunChargeRate;
+        public XRController rightController;
+        
         public static float gunMaxCharge;
-
         public static float _currentCharge;
         
         
@@ -61,8 +63,17 @@ namespace UnityVRScripts {
             Instantiate(bulletPrefab, transform.position, transform.rotation * Quaternion.Euler(90, 0, 0));
             Debug.Log("Fired Bullet");
             ArdCom.TurnOnRightRelayForDuration(200);
-            
 
+            var rightController = this.rightController.GetComponent<InputDevice>();
+            
+            if (rightController.isValid) {
+                var hapcap = new HapticCapabilities();
+                rightController.TryGetHapticCapabilities(out hapcap);
+
+                if (hapcap.supportsImpulse) {
+                    rightController.SendHapticImpulse(0, 1f, 0.3f);
+                }
+            }
         }
 
         void TriggerPress(XRBaseInteractor interactor) {

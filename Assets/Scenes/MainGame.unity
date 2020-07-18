@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 6227459}
   - component: {fileID: 6227458}
   - component: {fileID: 6227457}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor 2 Celling 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1121,7 +1121,7 @@ GameObject:
   - component: {fileID: 279340983}
   - component: {fileID: 279340982}
   - component: {fileID: 279340981}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1552,7 +1552,7 @@ GameObject:
   - component: {fileID: 538627057}
   - component: {fileID: 538627056}
   - component: {fileID: 538627055}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor 1 Celling 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2604,7 +2604,7 @@ GameObject:
   - component: {fileID: 856210746}
   - component: {fileID: 856210745}
   - component: {fileID: 856210744}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor 1 Celling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2922,7 +2922,7 @@ GameObject:
   - component: {fileID: 960091949}
   - component: {fileID: 960091948}
   - component: {fileID: 960091947}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor 3 Celling (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4245,7 +4245,7 @@ GameObject:
   - component: {fileID: 1226319975}
   - component: {fileID: 1226319974}
   - component: {fileID: 1226319973}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor 3 Celling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4603,7 +4603,7 @@ GameObject:
   - component: {fileID: 1327823141}
   - component: {fileID: 1327823140}
   - component: {fileID: 1327823139}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor 2 Celling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5772,7 +5772,7 @@ GameObject:
   - component: {fileID: 1641131235}
   - component: {fileID: 1641131234}
   - component: {fileID: 1641131233}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor 3 Celling (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5974,7 +5974,7 @@ GameObject:
   - component: {fileID: 1695322782}
   - component: {fileID: 1695322781}
   - component: {fileID: 1695322780}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6127,7 +6127,7 @@ GameObject:
   - component: {fileID: 1721965685}
   - component: {fileID: 1721965684}
   - component: {fileID: 1721965683}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

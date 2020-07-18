@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace UnityVRScripts {
@@ -7,6 +8,10 @@ namespace UnityVRScripts {
         void Awake() {
             if (useArduino && arduinoPort != null) 
                 ArdCom.Init(arduinoPort);
+        }
+
+        private void OnDestroy() {
+            ArdCom.Terminate();
         }
     }
 }

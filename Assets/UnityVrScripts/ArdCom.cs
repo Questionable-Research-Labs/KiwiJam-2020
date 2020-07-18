@@ -91,5 +91,9 @@ namespace UnityVRScripts {
                 LeftRelayOff();
             })).Start();
         }
+
+        public static void Terminate() {
+            serialPortStream.Close();
+        }
     }
 }

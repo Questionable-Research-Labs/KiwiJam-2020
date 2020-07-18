@@ -35,7 +35,7 @@ namespace UnityVRScripts {
 
         void Update() {
             if (!XRDevice.isPresent && enableBackupCamera) {
-                Debug.Log( new Vector3( Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")));
+                // Debug.Log( new Vector3( Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")));
                 lastMouse = new Vector3( Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"),0.0f);
                 lastMouse = new Vector3(-lastMouse.y * camSens, lastMouse.x * camSens, 0);
                 lastMouse = new Vector3(transform.eulerAngles.x + lastMouse.x, transform.eulerAngles.y + lastMouse.y,

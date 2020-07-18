@@ -9,6 +9,8 @@ TagManager:
   - OuterBox
   - Bullet
   - Spider
+  - TeleportIgnore
+  - ExcludeTeleport
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - 
   - teleport
   - GrabXR
-  - 
+  - TeleIgnore
   - 
   - 
   - 

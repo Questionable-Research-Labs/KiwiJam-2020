@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e57ca17f-3812-4460-8405-4169a7e22c10" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.KiwiJam-2020/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KiwiJam-2020/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.KiwiJam-2020/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KiwiJam-2020/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityVrScripts/NonVRMovment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityVrScripts/NonVRMovment.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +16,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/NonVRMovment.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/ControllerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/SpiderSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UnityVrScripts/GunManger.cs" root0="FORCE_HIGHLIGHTING" />
@@ -26,9 +30,10 @@
         <option value="$PROJECT_DIR$/Assets/UnityVrScripts/BulletMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/UnityVrScripts/ControllerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/UnityVrScripts/SpiderSpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/UnityVrScripts/GunManger.cs" />
         <option value="$PROJECT_DIR$/Assets/UnityVrScripts/followPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/UnityVrScripts/BulletManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/UnityVrScripts/NonVRMovment.cs" />
+        <option value="$PROJECT_DIR$/Assets/UnityVrScripts/GunManger.cs" />
       </list>
     </option>
   </component>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.1/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.1/resharper-host/local/Transient/ReSharperHost/v201/SolutionCaches/_KiwiJam-2020.458796792.00" t="ExcludeRecursive" />
-    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+    <e p="C:\Users\nigel\AppData\local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\nigel\AppData\local\JetBrains\Rider2020.2\resharper-host\local\Transient\ReSharperHost\v202\SolutionCaches\_KiwiJam-2020.-609497218.00" t="ExcludeRecursive" />
+    <e p="C:\Users\nigel\Desktop\game jam\KiwiJam-2020" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Shaders" t="Include">
-          <e p="Unlit-Line-Opaque.shader" t="Include" />
           <e p="pulsingEffectShader.shader" t="Include" />
+          <e p="Unlit-Line-Opaque.shader" t="Include" />
         </e>
         <e p="UnityVrScripts" t="Include">
           <e p="ArdCom.cs" t="Include" />
@@ -16,16 +16,17 @@
           <e p="BulletManager.cs" t="Include" />
           <e p="ControllerManager.cs" t="Include" />
           <e p="GunManger.cs" t="Include" />
+          <e p="hudUpdater.cs" t="Include" />
           <e p="NonVRMovment.cs" t="Include" />
           <e p="OpenElevator.cs" t="Include" />
+          <e p="SpiderController.cs" t="Include" />
           <e p="SpiderSpawner.cs" t="Include" />
-          <e p="followPlayer.cs" t="Include" />
         </e>
       </e>
       <e p="KiwiJam-2020.sln" t="IncludeFlat" />
-      <e p="Temp/bin" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>
 </project>

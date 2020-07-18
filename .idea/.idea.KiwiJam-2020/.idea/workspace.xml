@@ -20,13 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57ca17f-3812-4460-8405-4169a7e22c10" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.KiwiJam-2020/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KiwiJam-2020/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KiwiJam-2020/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KiwiJam-2020/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Elevator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Elevator.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityVrScripts/OpenElevator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityVrScripts/OpenElevator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityVrScripts/SpiderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityVrScripts/SpiderController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityVrScripts/hudUpdater.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityVrScripts/hudUpdater.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +108,8 @@
       <updated>1595024403631</updated>
       <workItem from="1595024414616" duration="623000" />
       <workItem from="1595049409934" duration="4452000" />
-      <workItem from="1595061769900" duration="3103000" />
+      <workItem from="1595061769900" duration="3535000" />
+      <workItem from="1595105959203" duration="583000" />
     </task>
     <servers />
   </component>

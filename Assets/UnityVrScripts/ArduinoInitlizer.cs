@@ -5,7 +5,7 @@ namespace UnityVRScripts {
         public string arduinoPort;
         public bool useArduino;
         void Awake() {
-            if (useArduino) 
+            if (useArduino && arduinoPort != null) 
                 ArdCom.Init(arduinoPort);
         }
     }

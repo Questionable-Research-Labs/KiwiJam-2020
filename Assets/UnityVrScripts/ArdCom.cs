@@ -76,11 +76,19 @@ namespace UnityVRScripts {
             SendToArduino("10");
         }
         
-        public static void ShockForTime(int activeMilliSeconds) {
+        public static void TurnOnRightRelayForDuration(int activeMilliSeconds) {
             new Thread(new ThreadStart(() => {
                 RightRelayOn();
                 System.Threading.Thread.Sleep(activeMilliSeconds);
                 RightRelayOff();
+            })).Start();
+        }
+        
+        public static void TurnOnLeftRelayForDuration(int activeMilliSeconds) {
+            new Thread(new ThreadStart(() => {
+                LeftRelayOn();
+                System.Threading.Thread.Sleep(activeMilliSeconds);
+                LeftRelayOff();
             })).Start();
         }
     }

@@ -31,13 +31,6 @@ namespace UnityVRScripts {
         }
         
         void Start() {
-            new Thread(() => {
-                PlaySound("s");
-                Thread.Sleep(5000);
-                PlaySound("g");
-                Thread.Sleep(5000);
-                PlaySound("k");
-            }).Start();
         }
 
         public static void PlaySound(string sound) {

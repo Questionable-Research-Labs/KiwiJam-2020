@@ -37,7 +37,7 @@ namespace UnityVRScripts {
         SpiderSpawner spiderSpawner;
 
         void Start() {
-            int size = Random.Range(0, 2);
+            float size = Random.Range(0.1f, 0.4f);
             gameObject.transform.localScale += new Vector3(size, size, size);
             rb = GetComponent<Rigidbody>();
             if (Random.Range(0, 2) == 0) {

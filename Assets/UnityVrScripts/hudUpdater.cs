@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,14 +16,30 @@ namespace UnityVRScripts {
 
         private bool healthCritcalWarning = false;
 
-        void Start() {
-            AudioManager.PlaySound("g");
+        void Start()
+        {
+            AudioManager.PlaySound("s");
+            Invoke(nameof(Sound1), 5);
+            Invoke(nameof(Sound2), 7);
+        }
 
+        void Sound1()
+        {
+            AudioManager.PlaySound("g");
+        }
+
+        void Sound2()
+        {
+            AudioManager.PlaySound("k");
         }
 
         // Update is called once per frame
         void Update() {
-            
+           /* if (!introduction)
+            {
+                introduction = true;
+
+            } */
         }
 
         private void OnGUI() {

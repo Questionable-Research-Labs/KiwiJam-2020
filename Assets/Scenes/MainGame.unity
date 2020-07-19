@@ -4889,6 +4889,7 @@ MonoBehaviour:
   startingPitch: 1
   startingTimeSamples: 1
   gunChargeRate: 0.8
+  flashLight: {fileID: 0}
   test: 0
 --- !u!1 &1308073801
 GameObject:
@@ -6051,6 +6052,11 @@ PrefabInstance:
         type: 3}
       propertyPath: slideAmmount
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5342487702964164876, guid: 55e04cf0af6edac8ca6e78c41be8e6f0,
+        type: 3}
+      propertyPath: movementSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5342487702964164879, guid: 55e04cf0af6edac8ca6e78c41be8e6f0,
         type: 3}
@@ -7373,7 +7379,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 85b9b995362a79f458bd5a8bb89a3dfe, type: 2}
+      objectReference: {fileID: 2100000, guid: 8c697ae5040bce3449a2767b8a8b7f0f, type: 2}
     - target: {fileID: 919132149155446097, guid: 3da789693fff7ec4b81c11a7a1f8ef3f,
         type: 3}
       propertyPath: m_Name
@@ -10782,80 +10788,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4407167790776067775}
   m_Mesh: {fileID: -7536622687930795020, guid: 5c85e0b8ec61dce4bba4b9741c33ff91, type: 3}
---- !u!1001 &1960872415986623749
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 159268059440062640, guid: fd1aead17e0993f489b0b751febb7c96,
-        type: 3}
-      propertyPath: spiderSpawner
-      value: 
-      objectReference: {fileID: 7973491}
-    - target: {fileID: 159268059440062642, guid: fd1aead17e0993f489b0b751febb7c96,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 159268059440062642, guid: fd1aead17e0993f489b0b751febb7c96,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 159268059440062642, guid: fd1aead17e0993f489b0b751febb7c96,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 159268059440062642, guid: fd1aead17e0993f489b0b751febb7c96,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 159268059440062642, guid: fd1aead17e0993f489b0b751febb7c96,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 159268059440062642, guid: fd1aead17e0993f489b0b751febb7c96,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 159268059440062642, guid: fd1aead17e0993f489b0b751febb7c96,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 159268059440062642, guid: fd1aead17e0993f489b0b751febb7c96,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 159268059440062642, guid: fd1aead17e0993f489b0b751febb7c96,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 159268059440062642, guid: fd1aead17e0993f489b0b751febb7c96,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 159268059440062642, guid: fd1aead17e0993f489b0b751febb7c96,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 159268059440062646, guid: fd1aead17e0993f489b0b751febb7c96,
-        type: 3}
-      propertyPath: m_Name
-      value: Spider
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fd1aead17e0993f489b0b751febb7c96, type: 3}
 --- !u!1 &1973258225803016101
 GameObject:
   m_ObjectHideFlags: 0
@@ -22356,6 +22288,7 @@ MonoBehaviour:
   startingPitch: 1
   startingTimeSamples: 1
   gunChargeRate: 0.8
+  flashLight: {fileID: 0}
   test: 0
 --- !u!82 &9153802963991776441
 AudioSource:

@@ -42,7 +42,7 @@ namespace UnityVRScripts {
         public GameObject animatorChild;
 
         void Start() {
-            float size = Random.Range(0.1f, 0.4f);
+            float size = Random.Range(0.1f, 0.2f);
             gameObject.transform.localScale += new Vector3(size, size, size);
             rb = GetComponent<Rigidbody>();
             if (Random.Range(0, 2) == 0) {

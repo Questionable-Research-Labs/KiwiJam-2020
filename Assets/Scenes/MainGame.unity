@@ -344,6 +344,8 @@ MonoBehaviour:
     pitch: 1
     volume: 0
   mainCamera: {fileID: 963194225}
+  audioThing: {fileID: 3524612437687774585, guid: d2c91752293c357628124f3d61f96578,
+    type: 3}
 --- !u!4 &15178745
 Transform:
   m_ObjectHideFlags: 0

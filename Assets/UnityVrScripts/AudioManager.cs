@@ -10,17 +10,21 @@ namespace UnityVRScripts {
         public GameObject mainCamera;
 
         private static List<AudioSource> _audioSources = new List<AudioSource>();
-        private static Sound[] _sounds;
+        public static Sound[] _sounds;
+
+        public GameObject audioThing;
         
         void Start() {
             _sounds = sounds;
             foreach (var sound in sounds) {
-                var audioSource = new AudioSource();
-                audioSource.GetComponent<GameObject>().name = $"{sound.name} Audio Source";
+                var ad = Instantiate(audioThing);
+                var audioSource = (AudioSource) ad.GetComponent<AudioSource>();
+                ad.name = $"{sound.name} Audio Source";
+                audioSource.playOnAwake = false;
                 audioSource.clip = sound.audioClip;
                 audioSource.volume = sound.volume;
                 audioSource.pitch = sound.pitch;
-                audioSource.transform.parent = mainCamera.transform;
+                ad.GetComponent<Transform>().parent = mainCamera.transform; 
                 _audioSources.Add(audioSource);
             }
 

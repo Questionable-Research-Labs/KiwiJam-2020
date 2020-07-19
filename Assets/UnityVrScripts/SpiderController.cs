@@ -37,6 +37,8 @@ namespace UnityVRScripts {
         SpiderSpawner spiderSpawner;
 
         void Start() {
+            int size = Random.Range(0, 2);
+            gameObject.transform.localScale += new Vector3(size, size, size);
             rb = GetComponent<Rigidbody>();
             if (Random.Range(0, 2) == 0) {
                 wayPoint = GameObject.Find("LeftBaseController");

@@ -95,12 +95,12 @@ namespace UnityVRScripts {
         void TriggerRelease() {
             triggerHeld = false;
             gunChargingAudioSource.Stop();
-            
             Debug.Log("Trigger Unpress");
             Debug.Log(_currentCharge);
             if (_currentCharge >= gunMaxCharge) {
                 _currentCharge = 0.0f;
                 FireBullet();
+                
             }
             //else {
                 //You should add a failed click

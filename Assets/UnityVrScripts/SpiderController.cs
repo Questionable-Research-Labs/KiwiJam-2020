@@ -90,7 +90,7 @@ namespace UnityVRScripts {
                 Time.time - lastLatch >= timeBetweenLatches) {
                 jumped = true;
                 latched = true;
-                hudUpdater.decreaseHealth(-1);
+                hudUpdater.decreaseHealth(-5);
                 latchedObject = other.gameObject;
                 latchedTime = Time.time;
                 rb.useGravity = false;

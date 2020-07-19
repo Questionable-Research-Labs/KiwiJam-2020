@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace UnityVRScripts {
     public class hudUpdater : MonoBehaviour {
-        public static float detectedHealth = 100;
+        public static float detectedHealth = 30;
         public static float dangerCompensation = 0;
 
         public Text dHBox; //detectedHealth

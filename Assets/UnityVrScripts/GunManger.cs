@@ -39,7 +39,14 @@ namespace UnityVRScripts {
         
         private void Update() {
             test = _currentCharge;
-            chargingBallScale = _currentCharge / 10;
+            if (_currentCharge > 1) {
+                chargingBallScale = 0.2f;
+            }
+            else {
+                chargingBallScale = _currentCharge / 5;
+            }
+            
+            
             chargingBall.transform.localScale = new Vector3(chargingBallScale,chargingBallScale,chargingBallScale);
             if (Input.GetAxis("XRI_Right_Trigger") >= 0.9 && !triggerHeld) {
                 TriggerPress();

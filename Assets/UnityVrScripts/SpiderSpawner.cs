@@ -23,6 +23,9 @@ namespace UnityVRScripts {
         private int spawningProgress;
 
         public int test;
+        private bool gameDone = false;
+
+        public LightsOff lightsToTurnOnAtEnd;
 
         public void SpawnSpider() {
             Debug.Log("Spawning spider");
@@ -31,21 +34,28 @@ namespace UnityVRScripts {
         }
 
         private void Update() {
-            if (currentlySpawning && Time.time - lastSpawnTime > spiderSpawnDelay) {
-                SpawnSpider();
-                lastSpawnTime = Time.time;
-                spiderCount++;
-                spawningProgress++;
-                if (spawningProgress >= waveSpiderAmounts[currentWave]) {
-                    currentlySpawning = false;
+            if (!gameDone) {
+                if (currentlySpawning && Time.time - lastSpawnTime > spiderSpawnDelay) {
+                    SpawnSpider();
+                    lastSpawnTime = Time.time;
+                    spiderCount++;
+                    spawningProgress++;
+                    if (spawningProgress >= waveSpiderAmounts[currentWave]) {
+                        currentlySpawning = false;
+                    }
+                } else if (spiderCount <= 1 && Time.time - lastWaveTime > waveSpiderTimes[currentWave]) {
+                    currentlySpawning = true;
+                    lastWaveTime = Time.time;
+                    spawningProgress = 0;
+                    currentWave++;
+                    Debug.Log("Starting wave");
+                    if (currentWave >= waveSpiderAmounts.Length) {
+                        gameDone = true;
+                        lightsToTurnOnAtEnd.LightsOn = false;
+                    }
                 }
-            } else if (spiderCount <= 1 && Time.time - lastWaveTime > waveSpiderTimes[currentWave]) {
-                currentlySpawning = true;
-                lastWaveTime = Time.time;
-                spawningProgress = 0;
-                currentWave++;
-                Debug.Log("Starting wave");
             }
+            
 
             test = spiderCount;
         }

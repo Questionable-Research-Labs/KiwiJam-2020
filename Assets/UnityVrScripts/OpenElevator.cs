@@ -34,7 +34,7 @@ namespace UnityVRScripts {
             new Thread(new ThreadStart(() =>
             {
                 ElevatorMoveDown();
-                Thread.Sleep(2000);
+                Thread.Sleep(2300);
                 OpenDoors();
                 Thread.Sleep(5000);
                 CloseDoors();

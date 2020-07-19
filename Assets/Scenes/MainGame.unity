@@ -1584,7 +1584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arduinoPort: COM14
-  useArduino: 1
+  useArduino: 0
 --- !u!1 &493657996
 GameObject:
   m_ObjectHideFlags: 0

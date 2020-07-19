@@ -104,7 +104,7 @@ namespace UnityVRScripts {
                 }
             } else if (other.gameObject.CompareTag("OuterBox")) {
                 spiderSpawner.SpawnSpider();
-                Debug.Log("Respawned spider");
+                // Debug.Log("Respawned spider");
                 Destroy(gameObject);
             }
         }

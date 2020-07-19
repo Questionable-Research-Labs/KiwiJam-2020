@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
+﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.Experimental.GlobalIllumination;
-using UnityEngine.Serialization;
-using UnityEngine.XR;
-using UnityEngine.XR.Interaction.Toolkit;
 
 namespace UnityVRScripts {
     [RequireComponent(typeof(AudioSource))]
@@ -61,14 +54,17 @@ namespace UnityVRScripts {
             Instantiate(bulletPrefab, transform.position, transform.rotation * Quaternion.Euler(90, 180, 0));
             Debug.Log("Fired Bullet");
             ArdCom.TurnOnRightRelayForDuration(200);
-            new Thread(() => {
-                flashLight.enabled = false;
-                Thread.Sleep(100);
-                flashLight.enabled = true;
-            }).Start();
+            StartCoroutine(nameof(TurnLightOff));
             // rightController.SendHapticImpulse(1f, 500);
         }
 
+        IEnumerable TurnLightOff() {
+            var light = flashLight.intensity;
+            flashLight.intensity = 0;
+            yield return new WaitForSeconds(0.3f);
+            flashLight.intensity = light;
+        }
+        
         void TriggerPress() {
             triggerHeld = true;
             gunChargingAudioSource.pitch = startingPitch;

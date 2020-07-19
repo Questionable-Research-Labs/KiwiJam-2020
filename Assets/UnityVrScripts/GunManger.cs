@@ -16,6 +16,9 @@ namespace UnityVRScripts {
 
         public float test;
 
+        public GameObject chargingBall;
+        public float chargingBallScale;
+
         //Play the music
         bool m_Play;
 
@@ -36,7 +39,8 @@ namespace UnityVRScripts {
         
         private void Update() {
             test = _currentCharge;
-            
+            chargingBallScale = _currentCharge / 10;
+            chargingBall.transform.localScale = new Vector3(chargingBallScale,chargingBallScale,chargingBallScale);
             if (Input.GetAxis("XRI_Right_Trigger") >= 0.9 && !triggerHeld) {
                 TriggerPress();
             } else if (Input.GetAxis("XRI_Right_Trigger") < 0.9 && triggerHeld) {

@@ -26,6 +26,9 @@ namespace UnityVRScripts {
         }
 
         private void OnGUI() {
+            if (detectedHealth < 0) {
+                detectedHealth = 0;
+            }
             dHBox.text = "Detected Health: " + detectedHealth + "%";
             dCBox.text = "Danger Compensation: " + dangerCompensation;
             goBox.text = "";

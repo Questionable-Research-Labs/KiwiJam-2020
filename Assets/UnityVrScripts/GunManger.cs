@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Serialization;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -14,6 +16,7 @@ namespace UnityVRScripts {
         public int startingPitch = 1;
         public int startingTimeSamples = 1;
         public float gunChargeRate;
+        public Light flashLight;
         
         public static float gunMaxCharge = 1;
         public static float _currentCharge;
@@ -42,17 +45,14 @@ namespace UnityVRScripts {
             test = _currentCharge;
             
             if (Input.GetAxis("XRI_Right_Trigger") >= 0.9 && !triggerHeld) {
-
                 TriggerPress();
             } else if (Input.GetAxis("XRI_Right_Trigger") < 0.9 && triggerHeld) {
                 TriggerRelease();
-                
             }
             
             if (triggerHeld) {
                 _currentCharge += gunChargeRate * Time.deltaTime;
-            }
-            else if (_currentCharge>0) {
+            } else if (_currentCharge>0) {
                 _currentCharge -= gunChargeRate * Time.deltaTime;
             }
         }
@@ -61,7 +61,11 @@ namespace UnityVRScripts {
             Instantiate(bulletPrefab, transform.position, transform.rotation * Quaternion.Euler(90, 180, 0));
             Debug.Log("Fired Bullet");
             ArdCom.TurnOnRightRelayForDuration(200);
-
+            new Thread(() => {
+                flashLight.enabled = false;
+                Thread.Sleep(100);
+                flashLight.enabled = true;
+            }).Start();
             // rightController.SendHapticImpulse(1f, 500);
         }
 

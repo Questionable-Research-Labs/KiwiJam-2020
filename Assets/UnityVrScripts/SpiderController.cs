@@ -94,6 +94,7 @@ namespace UnityVRScripts {
                 latchedObject = other.gameObject;
                 latchedTime = Time.time;
                 rb.useGravity = false;
+                ArdCom.TurnOnControllerForDuration(100, other.gameObject);
             }
         }
 
@@ -111,7 +112,6 @@ namespace UnityVRScripts {
 
         private void UnlatchSpider(GameObject controlller) {
             latched = false;
-            ArdCom.TurnOnControllerForDuration(100, controlller);
             rb.useGravity = true;
             lastLatch = Time.time;
         }

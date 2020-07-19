@@ -27,8 +27,8 @@ namespace UnityVRScripts {
         void Start() {
             //Fetch the AudioSource from the GameObject
             gunChargingAudioSource = GetComponent<AudioSource>();
-            gunChargingAudioSource.pitch = startingPitch;
-            gunChargingAudioSource.volume = 0.2f;
+            //gunChargingAudioSource.pitch = startingPitch;
+            //gunChargingAudioSource.volume = 0.2f;
             
             //Ensure the toggle is set to true for the music to play at start-up
             m_Play = true;
@@ -76,6 +76,7 @@ namespace UnityVRScripts {
         }
         void TriggerRelease() {
             triggerHeld = false;
+            gunChargingAudioSource.Stop();
             
             Debug.Log("Trigger Unpress");
             Debug.Log(_currentCharge);
@@ -83,12 +84,13 @@ namespace UnityVRScripts {
                 _currentCharge = 0.0f;
                 FireBullet();
             }
-            else {
+            //else {
                 //You should add a failed click
-                gunChargingAudioSource.timeSamples = gunChargingAudioSource.clip.samples - 1;
-                gunChargingAudioSource.pitch = -1;
-                gunChargingAudioSource.Play();
-            }
+                //gunChargingAudioSource.timeSamples = gunChargingAudioSource.clip.samples - 1;
+                //gunChargingAudioSource.pitch = -1;
+                //gunChargingAudioSource.
+                //();
+           // }
             
         }
     }

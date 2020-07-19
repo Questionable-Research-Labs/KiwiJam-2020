@@ -39,6 +39,8 @@ namespace UnityVRScripts {
 
         SpiderSpawner spiderSpawner;
 
+        public GameObject animatorChild;
+
         void Start() {
             int size = Random.Range(0, 2);
             gameObject.transform.localScale += new Vector3(size, size, size);
@@ -56,7 +58,7 @@ namespace UnityVRScripts {
         }
         
         void Update() {
-            if (!latched && !shouldMove) {
+            if (!latched && shouldMove) {
                 objectSelfPos = transform.position;
                 wayPointPos = wayPoint.transform.position;
                 dist = Vector3.Distance(objectSelfPos, wayPointPos);
@@ -92,7 +94,7 @@ namespace UnityVRScripts {
             
             SpiderSpawner.DecreaseSpiderCount();
             Debug.Log("SpiderDead");
-            gameObject.GetComponentInChildren<Animator>().SetBool("Death",true);
+            animatorChild.GetComponent<Animator>().SetBool("Death",true);
             Destroy(gameObject);
         }
 

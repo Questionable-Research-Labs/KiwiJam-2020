@@ -1973,6 +1973,7 @@ MonoBehaviour:
   latchingTime: 2
   timeBetweenJumps: 2
   timeLastedJump: 0
+  animatorChild: {fileID: 3752071361358688121}
 --- !u!65 &6705198438637933147
 BoxCollider:
   m_ObjectHideFlags: 0

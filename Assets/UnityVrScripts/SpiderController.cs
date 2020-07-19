@@ -70,7 +70,7 @@ namespace UnityVRScripts {
                 transform.position = Vector3.MoveTowards(transform.position, wayPointPos, speed * Time.deltaTime);
                 transform.LookAt(wayPoint.transform);
             }
-            else {
+            else if (latched) {
                 transform.position = latchedObject.transform.position;
                 transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f));
                 rb.velocity = Vector3.zero;
@@ -85,7 +85,8 @@ namespace UnityVRScripts {
         {
             shouldMove = false;
             boom.Play();
-            Invoke(nameof(NoSpider), 1);
+            animatorChild.GetComponent<Animator>().SetTrigger("Death");
+            Invoke(nameof(NoSpider), 2);
         }
 
         void NoSpider()
@@ -94,7 +95,7 @@ namespace UnityVRScripts {
             
             SpiderSpawner.DecreaseSpiderCount();
             Debug.Log("SpiderDead");
-            animatorChild.GetComponent<Animator>().SetBool("Death",true);
+            
             Destroy(gameObject);
         }
 

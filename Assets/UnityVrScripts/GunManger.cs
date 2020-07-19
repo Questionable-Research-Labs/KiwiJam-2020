@@ -15,10 +15,10 @@ namespace UnityVRScripts {
         public int startingTimeSamples = 1;
         public float gunChargeRate;
         
-        public static float gunMaxCharge;
+        public static float gunMaxCharge = 1;
         public static float _currentCharge;
-        
-        
+
+        public float test;
 
         //Play the music
         bool m_Play;
@@ -39,10 +39,12 @@ namespace UnityVRScripts {
         }
         
         private void Update() {
-            if (Input.GetAxis("XRI_Right_Trigger") < 0.5 && !triggerHeld) {
+            test = _currentCharge;
+            
+            if (Input.GetAxis("XRI_Right_Trigger") >= 0.9 && !triggerHeld) {
 
                 TriggerPress();
-            } else if (Input.GetAxis("XRI_Right_Trigger") > 0.5 && triggerHeld) {
+            } else if (Input.GetAxis("XRI_Right_Trigger") < 0.9 && triggerHeld) {
                 TriggerRelease();
                 
             }
@@ -73,13 +75,15 @@ namespace UnityVRScripts {
         }
         void TriggerRelease() {
             triggerHeld = false;
-            _currentCharge = 0.0f;
+            
             Debug.Log("Trigger Unpress");
             Debug.Log(_currentCharge);
             if (_currentCharge >= gunMaxCharge) {
+                _currentCharge = 0.0f;
                 FireBullet();
             }
             else {
+                //You should add a failed click
                 gunChargingAudioSource.timeSamples = gunChargingAudioSource.clip.samples - 1;
                 gunChargingAudioSource.pitch = -1;
                 gunChargingAudioSource.Play();

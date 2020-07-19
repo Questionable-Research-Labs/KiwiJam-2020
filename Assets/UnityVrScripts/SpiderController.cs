@@ -34,7 +34,7 @@ namespace UnityVRScripts {
         public float timeBetweenJumps;
         public float timeLastedJump;
 
-        public SpiderSpawner spiderSpawner;
+        SpiderSpawner spiderSpawner;
 
         void Start() {
             rb = GetComponent<Rigidbody>();
@@ -46,6 +46,10 @@ namespace UnityVRScripts {
             }
         }
 
+        public void SetSpawner(SpiderSpawner spiderSpawner) {
+            this.spiderSpawner = spiderSpawner;
+        }
+        
         void Update() {
             if (!latched) {
                 objectSelfPos = transform.position;

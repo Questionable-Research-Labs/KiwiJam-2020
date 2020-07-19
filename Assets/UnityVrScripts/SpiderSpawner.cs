@@ -25,8 +25,9 @@ namespace UnityVRScripts {
         public int test;
 
         public void SpawnSpider() {
-            Debug.Log("");
-            Instantiate(spiderPrefab, spawnLocations[UnityEngine.Random.Range(0,spawnLocations.Length)],Quaternion.identity );
+            Debug.Log("Spawning spider");
+            var a = Instantiate(spiderPrefab, spawnLocations[UnityEngine.Random.Range(0,spawnLocations.Length)],Quaternion.identity );
+            a.GetComponent<SpiderController>().SetSpawner(this);
         }
 
         private void Update() {

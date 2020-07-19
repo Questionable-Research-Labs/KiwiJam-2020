@@ -109,7 +109,8 @@ namespace UnityVRScripts {
         public static void Terminate() {
             if (useArdunio)
             {
-                TurnAllRelaysOff();
+                SendToArduino("00");
+                SendToArduino("10");
                 serialPortStream.Close();
                 useArdunio = false;
             }

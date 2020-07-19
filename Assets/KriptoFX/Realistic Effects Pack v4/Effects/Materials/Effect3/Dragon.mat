@@ -111,4 +111,4 @@ Material:
     - _FogColorMultiplier: {r: 0, g: 0, b: 0, a: 0}
     - _FresnelColor: {r: 2, g: 0.9572008, b: 0.57352936, a: 1}
     - _Tiling: {r: 800, g: 800, b: 8, a: 8}
-    - _TintColor: {r: 3.4415908, g: 1.485927, b: 0.57660145, a: 1}
+    - _TintColor: {r: 3.441591, g: 0.5766015, b: 2.6310408, a: 1}

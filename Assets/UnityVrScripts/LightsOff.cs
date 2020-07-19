@@ -9,7 +9,7 @@ public class LightsOff : MonoBehaviour
     void Start () {
         new Thread(() =>
         {
-            Thread.Sleep(5000);
+            Thread.Sleep(5000000);
             LightsOn = true;
         }).Start();
     }    

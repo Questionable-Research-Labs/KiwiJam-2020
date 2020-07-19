@@ -64,16 +64,7 @@ namespace UnityVRScripts {
             Debug.Log("Fired Bullet");
             ArdCom.TurnOnRightRelayForDuration(200);
 
-            var rightController = this.rightController.GetComponent<InputDevice>();
-            
-            if (rightController.isValid) {
-                var hapcap = new HapticCapabilities();
-                rightController.TryGetHapticCapabilities(out hapcap);
-
-                if (hapcap.supportsImpulse) {
-                    rightController.SendHapticImpulse(0, 1f, 0.3f);
-                }
-            }
+            // rightController.SendHapticImpulse(1f, 500);
         }
 
         void TriggerPress(XRBaseInteractor interactor) {

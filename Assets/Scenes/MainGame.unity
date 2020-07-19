@@ -344,6 +344,8 @@ MonoBehaviour:
     pitch: 1
     volume: 0
   mainCamera: {fileID: 963194225}
+  audioThing: {fileID: 3524612437687774585, guid: d2c91752293c357628124f3d61f96578,
+    type: 3}
 --- !u!4 &15178745
 Transform:
   m_ObjectHideFlags: 0
@@ -356,7 +358,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &32922696
 GameObject:
@@ -721,7 +723,7 @@ Transform:
   m_Children:
   - {fileID: 1498100749}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &128739633
 MonoBehaviour:
@@ -1569,7 +1571,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &488981587
 MonoBehaviour:
@@ -2931,7 +2933,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &856210742
 GameObject:
@@ -4483,7 +4485,7 @@ Transform:
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1170945154
 GameObject:

@@ -23,7 +23,7 @@ namespace UnityVRScripts {
         private int spawningProgress;
 
         public int test;
-        private bool gameDone = false;
+        public static bool spawningEnabled = false;
 
         public LightsOff lightsToTurnOnAtEnd;
 
@@ -34,7 +34,7 @@ namespace UnityVRScripts {
         }
 
         private void Update() {
-            if (!gameDone) {
+            if (spawningEnabled) {
                 if (currentlySpawning && Time.time - lastSpawnTime > spiderSpawnDelay) {
                     SpawnSpider();
                     lastSpawnTime = Time.time;
@@ -50,7 +50,7 @@ namespace UnityVRScripts {
                     currentWave++;
                     Debug.Log("Starting wave");
                     if (currentWave >= waveSpiderAmounts.Length) {
-                        gameDone = true;
+                        spawningEnabled = false;
                         lightsToTurnOnAtEnd.LightsOn = false;
                     }
                 }

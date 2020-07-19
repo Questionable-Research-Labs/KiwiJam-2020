@@ -7269,7 +7269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e988983f96fe1dd48800bcdfc82f23e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LineWidth: 0.02
+  m_LineWidth: 0.001
   m_OverrideInteractorLineLength: 0
   m_LineLength: 10
   m_WidthCurve:
@@ -7403,7 +7403,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.02
+    widthMultiplier: 0.001
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -22664,6 +22664,7 @@ MonoBehaviour:
   startingTimeSamples: 1
   gunChargeRate: 0.8
   flashLight: {fileID: 0}
+  testedgun: 0
   test: 0
   chargingBall: {fileID: 486528667}
   chargingBallScale: 0

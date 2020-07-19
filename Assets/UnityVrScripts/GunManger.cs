@@ -66,6 +66,7 @@ namespace UnityVRScripts {
             if (!testedgun)
             {
                 AudioManager.PlaySound("d");
+                SpiderSpawner.spawningEnabled = true;
                 testedgun = true;
             }
 

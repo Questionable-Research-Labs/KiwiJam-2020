@@ -10,7 +10,7 @@ namespace UnityVRScripts {
         public int startingTimeSamples = 1;
         public float gunChargeRate;
         public Light flashLight;
-        
+        public bool testedgun = false;
         public static float gunMaxCharge = 1;
         public static float _currentCharge;
 
@@ -63,6 +63,8 @@ namespace UnityVRScripts {
         }
 
         void FireBullet() {
+            testedgun = true;
+
             Instantiate(bulletPrefab, transform.position, transform.rotation * Quaternion.Euler(90, 180, 0));
             Debug.Log("Fired Bullet");
             ArdCom.TurnOnRightRelayForDuration(200);

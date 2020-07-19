@@ -30,6 +30,7 @@ namespace UnityVRScripts {
         public float latchedTime = 0;
         public float timeBetweenLatches;
         public float lastLatch = 0.0f;
+        private bool shouldMove = true;
 
         public float latchingTime;
 
@@ -55,7 +56,7 @@ namespace UnityVRScripts {
         }
         
         void Update() {
-            if (!latched) {
+            if (!latched && !shouldMove) {
                 objectSelfPos = transform.position;
                 wayPointPos = wayPoint.transform.position;
                 dist = Vector3.Distance(objectSelfPos, wayPointPos);
@@ -78,8 +79,15 @@ namespace UnityVRScripts {
 
         }
 
-        public void SpiderDeath() {
+        public void SpiderDeath()
+        {
+            shouldMove = false;
             boom.Play();
+            Invoke(nameof(NoSpider), 1);
+        }
+
+        void NoSpider()
+        {
             hudUpdater.increaseScore(100);
             Destroy(gameObject);
             SpiderSpawner.DecreaseSpiderCount();

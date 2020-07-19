@@ -74,7 +74,7 @@ namespace UnityVRScripts {
             Debug.Log("Fired Bullet");
             ArdCom.TurnOnRightRelayForDuration(200);
             StartCoroutine(nameof(TurnLightOff));
-            // rightController.SendHapticImpulse(1f, 500);
+             //rightController.SendHapticImpulse(1f, 500);
         }
 
         IEnumerable TurnLightOff() {

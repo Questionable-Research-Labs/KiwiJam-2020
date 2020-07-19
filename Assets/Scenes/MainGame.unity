@@ -269,16 +269,16 @@ MonoBehaviour:
   - {x: -4.98, y: -5, z: -15.9}
   - {x: -4.98, y: -5, z: -18.2}
   - {x: -4.98, y: -5, z: -21.2}
-  waveSpiderAmounts: 0100000003000000050000000700000004000000
+  waveSpiderAmounts: 01000000030000000500000007000000
   waveSpiderTimes:
   - 10
   - 20
   - 20
   - 40
-  - 30
-  spiderSpawnDelay: 2
+  spiderSpawnDelay: 1
   currentWave: 0
   test: 0
+  lightsToTurnOnAtEnd: {fileID: 473831631}
 --- !u!4 &7973492
 Transform:
   m_ObjectHideFlags: 0

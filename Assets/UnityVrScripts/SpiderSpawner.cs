@@ -21,11 +21,6 @@ namespace UnityVRScripts {
         
         private bool currentlySpawning;
         private int spawningProgress;
-        private void Start() {
-            for (int i = 0; i < 10; i++) {
-                Instantiate(spiderPrefab, new Vector3(UnityEngine.Random.Range(3.0f, 8.0f), -3.0f, UnityEngine.Random.Range(-10.0f, 10.0f)),Quaternion.identity );
-            }
-        }
 
         private void SpawnSpider() {
             Instantiate(spiderPrefab, spawnLocations[UnityEngine.Random.Range(0,spawnLocations.Length)],Quaternion.identity );
@@ -36,7 +31,8 @@ namespace UnityVRScripts {
                 SpawnSpider();
                 lastSpawnTime = Time.time;
                 spiderCount++;
-                if (spiderCount >= waveSpiderAmounts[currentWave]) {
+                spawningProgress++;
+                if (spawningProgress >= waveSpiderAmounts[currentWave]) {
                     currentlySpawning = false;
                 }
             } else if (spiderCount <= 1 && Time.time - lastWaveTime > waveSpiderTimes[currentWave]) {
@@ -45,6 +41,10 @@ namespace UnityVRScripts {
                 spawningProgress = 0;
                 currentWave++;
             }
+        }
+
+        public static void DecreaseSpiderCount() {
+            spiderCount--;
         }
     }
 }

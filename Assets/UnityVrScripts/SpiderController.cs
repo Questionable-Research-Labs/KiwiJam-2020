@@ -9,98 +9,101 @@ using UnityEngine;
 using UnityVRScripts;
 using Random = UnityEngine.Random;
 
-[RequireComponent(typeof(Rigidbody))]
-public class SpiderController : MonoBehaviour
+namespace UnityVRScripts {
+    [RequireComponent(typeof(Rigidbody))]
+    public class SpiderController : MonoBehaviour {
+        private GameObject wayPoint;
+        private Vector3 wayPointPos;
+        private Vector3 objectSelfPos;
 
-{
-    private GameObject wayPoint;
-    private Vector3 wayPointPos;
-    private Vector3 objectSelfPos;
-    private float dist;
-    //  I am speeed vvvvvv
-    private float speed = 1.5f;
-    private Rigidbody rb;
-    private bool jumped = false;
+        private float dist;
 
-    public bool latched = false;
-    public GameObject latchedObject = null;
-    public float latchedTime = 0;
-    public float timeBetweenLatches;
-    public float lastLatch = 0.0f;
+        //  I am speeed vvvvvv
+        private float speed = 1.5f;
+        private Rigidbody rb;
+        private bool jumped = false;
 
-    public float latchingTime;
+        public bool latched = false;
+        public GameObject latchedObject = null;
+        public float latchedTime = 0;
+        public float timeBetweenLatches;
+        public float lastLatch = 0.0f;
 
-    public float timeBetweenJumps;
-    public float timeLastedJump;
+        public float latchingTime;
 
-    void Start() {
-        rb = GetComponent<Rigidbody>();
-        if (Random.Range(0, 2) == 0)
-        {
-            wayPoint = GameObject.Find("LeftBaseController");
-        }
-        else
-        {
-            wayPoint = GameObject.Find("RightBaseController");
-        }
-    }
+        public float timeBetweenJumps;
+        public float timeLastedJump;
 
-    void Update() {
-        if (!latched) {
-            objectSelfPos = transform.position;
-            wayPointPos = wayPoint.transform.position;
-            dist = Vector3.Distance(objectSelfPos, wayPointPos);
-            if (dist <= 1 && !jumped && Time.time - timeLastedJump >= timeBetweenJumps)
-            {
-                rb.AddForce(0, 5, 0, ForceMode.Impulse);
-                jumped = !jumped;
+        void Start() {
+            rb = GetComponent<Rigidbody>();
+            if (Random.Range(0, 2) == 0) {
+                wayPoint = GameObject.Find("LeftBaseController");
             }
-            transform.position = Vector3.MoveTowards(transform.position, wayPointPos, speed * Time.deltaTime);
-            transform.LookAt(wayPoint.transform);
-        }
-        else {
-            transform.position = latchedObject.transform.position;
-            transform.rotation = Quaternion.Euler(new Vector3(0.0f,0.0f,0.0f));
-            rb.velocity = Vector3.zero;
-            if (Time.time - latchedTime >= latchingTime) {
-                UnlatchSpider(latchedObject.gameObject);
+            else {
+                wayPoint = GameObject.Find("RightBaseController");
             }
         }
 
-    }
+        void Update() {
+            if (!latched) {
+                objectSelfPos = transform.position;
+                wayPointPos = wayPoint.transform.position;
+                dist = Vector3.Distance(objectSelfPos, wayPointPos);
+                if (dist <= 1 && !jumped && Time.time - timeLastedJump >= timeBetweenJumps) {
+                    rb.AddForce(0, 5, 0, ForceMode.Impulse);
+                    jumped = !jumped;
+                }
 
-    public void SpiderDeath() {
-        hudUpdater.increaseScore(100);
-        Destroy(gameObject);
-    }
+                transform.position = Vector3.MoveTowards(transform.position, wayPointPos, speed * Time.deltaTime);
+                transform.LookAt(wayPoint.transform);
+            }
+            else {
+                transform.position = latchedObject.transform.position;
+                transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f));
+                rb.velocity = Vector3.zero;
+                if (Time.time - latchedTime >= latchingTime) {
+                    UnlatchSpider(latchedObject.gameObject);
+                }
+            }
 
-    void OnCollisionEnter(Collision collision) {
-        jumped = false;
-        timeLastedJump = Time.time;
-    }
-
-    private void OnTriggerEnter(Collider other) {
-        if ((other.gameObject.CompareTag("LeftController") || other.gameObject.CompareTag("RightController")) && Time.time - lastLatch >= timeBetweenLatches) {
-            jumped = true;
-            latched = true;
-            hudUpdater.decreaseHealth(-1);
-            latchedObject = other.gameObject;
-            latchedTime = Time.time;
-            rb.useGravity = false;
         }
-    }
-    private void OnTriggerExit(Collider other) {
-        if (other.gameObject.CompareTag("LeftController") || other.gameObject.CompareTag("RightController")) {
-            if (latched) {
-                UnlatchSpider(other.gameObject);
+
+        public void SpiderDeath() {
+            hudUpdater.increaseScore(100);
+            Destroy(gameObject);
+            SpiderSpawner.DecreaseSpiderCount();
+        }
+
+        void OnCollisionEnter(Collision collision) {
+            jumped = false;
+            timeLastedJump = Time.time;
+        }
+
+        private void OnTriggerEnter(Collider other) {
+            if ((other.gameObject.CompareTag("LeftController") || other.gameObject.CompareTag("RightController")) &&
+                Time.time - lastLatch >= timeBetweenLatches) {
+                jumped = true;
+                latched = true;
+                hudUpdater.decreaseHealth(-1);
+                latchedObject = other.gameObject;
+                latchedTime = Time.time;
+                rb.useGravity = false;
             }
         }
-    }
 
-    private void UnlatchSpider(GameObject controlller) {
-        latched = false;
-        ArdCom.TurnOnControllerForDuration(100, controlller);
-        rb.useGravity = true;
-        lastLatch = Time.time;
+        private void OnTriggerExit(Collider other) {
+            if (other.gameObject.CompareTag("LeftController") || other.gameObject.CompareTag("RightController")) {
+                if (latched) {
+                    UnlatchSpider(other.gameObject);
+                }
+            }
+        }
+
+        private void UnlatchSpider(GameObject controlller) {
+            latched = false;
+            ArdCom.TurnOnControllerForDuration(100, controlller);
+            rb.useGravity = true;
+            lastLatch = Time.time;
+        }
     }
 }

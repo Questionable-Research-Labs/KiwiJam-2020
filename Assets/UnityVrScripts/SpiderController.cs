@@ -89,8 +89,11 @@ namespace UnityVRScripts {
         void NoSpider()
         {
             hudUpdater.increaseScore(100);
-            Destroy(gameObject);
+            
             SpiderSpawner.DecreaseSpiderCount();
+            Debug.Log("SpiderDead");
+            gameObject.GetComponentInChildren<Animator>().SetBool("Death",true);
+            Destroy(gameObject);
         }
 
         void OnCollisionEnter(Collision collision) {

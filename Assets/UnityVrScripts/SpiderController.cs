@@ -16,6 +16,8 @@ namespace UnityVRScripts {
         private Vector3 wayPointPos;
         private Vector3 objectSelfPos;
 
+        public AudioSource bite, chatter, boom;
+
         private float dist;
 
         //  I am speeed vvvvvv
@@ -77,6 +79,7 @@ namespace UnityVRScripts {
         }
 
         public void SpiderDeath() {
+            boom.Play();
             hudUpdater.increaseScore(100);
             Destroy(gameObject);
             SpiderSpawner.DecreaseSpiderCount();

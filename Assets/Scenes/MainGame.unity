@@ -269,7 +269,7 @@ MonoBehaviour:
   - {x: 7.411, y: -5, z: -10.62}
   - {x: 5.64, y: -5, z: -10.62}
   - {x: 3.05, y: -5, z: -10.62}
-  waveSpiderAmounts: 01000000030000000400000004000000
+  waveSpiderAmounts: 01000000020000000300000003000000
   waveSpiderTimes:
   - 10
   - 20
@@ -1683,8 +1683,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee0d16333ca46f6bc25583e154ae8ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arduinoPort: COM14
-  useArduino: 0
+  arduinoPort: COM5
+  useArduino: 1
 --- !u!1 &493657996
 GameObject:
   m_ObjectHideFlags: 0
@@ -22667,7 +22667,7 @@ MonoBehaviour:
     type: 3}
   startingPitch: 1
   startingTimeSamples: 1
-  gunChargeRate: 1
+  gunChargeRate: 2.5
   flashLight: {fileID: 0}
   testedgun: 0
   test: 0
@@ -22683,7 +22683,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c68a736447b54fe499f7cd5c308d33a6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 385b6dc327442db4e9c14e6204e19f33, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

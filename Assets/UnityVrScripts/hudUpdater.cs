@@ -50,6 +50,7 @@ namespace UnityVRScripts {
             dCBox.text = "Danger Compensation: " + dangerCompensation;
             goBox.text = "";
             if (detectedHealth <= 0){
+                ArdCom.Terminate();
                 goBox.text = "Game Over!";
             }
             if (detectedHealth <= 5 && !healthCritcalWarning)

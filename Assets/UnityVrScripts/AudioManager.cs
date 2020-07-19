@@ -32,11 +32,11 @@ namespace UnityVRScripts {
         
         void Start() {
             new Thread(() => {
-                PlaySound(sounds[0].name);
+                PlaySound("s");
                 Thread.Sleep(5000);
-                PlaySound(sounds[1].name);
+                PlaySound("g");
                 Thread.Sleep(5000);
-                PlaySound(sounds[4].name);
+                PlaySound("k");
             }).Start();
         }
 

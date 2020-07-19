@@ -16,6 +16,8 @@ namespace UnityVRScripts {
         private Vector3 wayPointPos;
         private Vector3 objectSelfPos;
 
+        public AudioSource bite, chatter, boom;
+
         private float dist;
 
         //  I am speeed vvvvvv
@@ -28,6 +30,7 @@ namespace UnityVRScripts {
         public float latchedTime = 0;
         public float timeBetweenLatches;
         public float lastLatch = 0.0f;
+        private bool shouldMove = true;
 
         public float latchingTime;
 
@@ -35,6 +38,8 @@ namespace UnityVRScripts {
         public float timeLastedJump;
 
         SpiderSpawner spiderSpawner;
+
+        public GameObject animatorChild;
 
         void Start() {
             float size = Random.Range(0.1f, 0.4f);
@@ -53,7 +58,7 @@ namespace UnityVRScripts {
         }
         
         void Update() {
-            if (!latched) {
+            if (!latched && shouldMove) {
                 objectSelfPos = transform.position;
                 wayPointPos = wayPoint.transform.position;
                 dist = Vector3.Distance(objectSelfPos, wayPointPos);
@@ -76,10 +81,21 @@ namespace UnityVRScripts {
 
         }
 
-        public void SpiderDeath() {
+        public void SpiderDeath()
+        {
+            shouldMove = false;
+            boom.Play();
+            Invoke(nameof(NoSpider), 1);
+        }
+
+        void NoSpider()
+        {
             hudUpdater.increaseScore(100);
-            Destroy(gameObject);
+            
             SpiderSpawner.DecreaseSpiderCount();
+            Debug.Log("SpiderDead");
+            animatorChild.GetComponent<Animator>().SetBool("Death",true);
+            Destroy(gameObject);
         }
 
         void OnCollisionEnter(Collision collision) {

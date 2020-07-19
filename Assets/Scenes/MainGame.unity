@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 212ef42f881591a428f83c7ef27a9cf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spiderPrefab: {fileID: 1802493621590275194, guid: 771e6001194155141bf64bb649323d4e,
+  spiderPrefab: {fileID: 6705198438637933146, guid: 771e6001194155141bf64bb649323d4e,
     type: 3}
   spawnLocations:
   - {x: 4.886, y: -5, z: 4.203}
@@ -325,22 +325,27 @@ MonoBehaviour:
   sounds:
   - audioClip: {fileID: 8300000, guid: 8a33c21511ac95ff9b9f3b9d4772a9a3, type: 3}
     name: s
+    parent: {fileID: 0}
     pitch: 1
     volume: 1
   - audioClip: {fileID: 8300000, guid: cf2eb1a0ce8a32b3082e91d701bc3569, type: 3}
     name: g
+    parent: {fileID: 0}
     pitch: 1
     volume: 1
   - audioClip: {fileID: 8300000, guid: 2cb980ea074129d47b0f71fcf081b102, type: 3}
     name: h
+    parent: {fileID: 0}
     pitch: 1
     volume: 1
   - audioClip: {fileID: 8300000, guid: 427da83417378c56aa69177dfdcc27fd, type: 3}
     name: d
+    parent: {fileID: 0}
     pitch: 1
     volume: 1
   - audioClip: {fileID: 8300000, guid: 2e3145ac222a12cea8bb8b7b61d85eef, type: 3}
     name: k
+    parent: {fileID: 0}
     pitch: 1
     volume: 1
   mainCamera: {fileID: 963194225}

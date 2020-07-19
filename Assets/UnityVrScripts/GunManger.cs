@@ -74,7 +74,7 @@ namespace UnityVRScripts {
             Debug.Log("Fired Bullet");
             ArdCom.TurnOnRightRelayForDuration(200);
             StartCoroutine(nameof(TurnLightOff));
-            // rightController.SendHapticImpulse(1f, 500);
+             //rightController.SendHapticImpulse(1f, 500);
         }
 
         IEnumerable TurnLightOff() {
@@ -95,12 +95,12 @@ namespace UnityVRScripts {
         void TriggerRelease() {
             triggerHeld = false;
             gunChargingAudioSource.Stop();
-            
             Debug.Log("Trigger Unpress");
             Debug.Log(_currentCharge);
             if (_currentCharge >= gunMaxCharge) {
                 _currentCharge = 0.0f;
                 FireBullet();
+                
             }
             //else {
                 //You should add a failed click

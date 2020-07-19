@@ -25,7 +25,14 @@ namespace UnityVRScripts {
                 audioSource.clip = sound.audioClip;
                 audioSource.volume = sound.volume;
                 audioSource.pitch = sound.pitch;
-                ad.GetComponent<Transform>().parent = mainCamera.transform; 
+                if (sound.parent != null)
+                {
+                    ad.GetComponent<Transform>().parent = sound.parent.transform;
+                }
+                else
+                {
+                    ad.GetComponent<Transform>().parent = mainCamera.transform;
+                }
                 _audioSources.Add(ad);
             }
         }

@@ -1518,8 +1518,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee0d16333ca46f6bc25583e154ae8ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arduinoPort: COM5
-  useArduino: 0
+  arduinoPort: COM14
+  useArduino: 1
 --- !u!1 &493657996
 GameObject:
   m_ObjectHideFlags: 0
@@ -22497,7 +22497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 361419b65a1eb93448492aecfbc852c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 4095731066072081343, guid: 6baf028cb8941ec4ca78ca5d4299588c,
+  bulletPrefab: {fileID: 6895535676534937961, guid: 11c6909124c7da14eb0f945906ea771e,
     type: 3}
   startingPitch: 1
   startingTimeSamples: 1

@@ -269,12 +269,12 @@ MonoBehaviour:
   - {x: 7.411, y: -5, z: -10.62}
   - {x: 5.64, y: -5, z: -10.62}
   - {x: 3.05, y: -5, z: -10.62}
-  waveSpiderAmounts: 01000000030000000500000007000000
+  waveSpiderAmounts: 01000000030000000400000004000000
   waveSpiderTimes:
   - 10
   - 20
   - 20
-  - 40
+  - 10
   spiderSpawnDelay: 1
   currentWave: 0
   test: 0
@@ -22667,7 +22667,7 @@ MonoBehaviour:
     type: 3}
   startingPitch: 1
   startingTimeSamples: 1
-  gunChargeRate: 0.8
+  gunChargeRate: 1
   flashLight: {fileID: 0}
   testedgun: 0
   test: 0

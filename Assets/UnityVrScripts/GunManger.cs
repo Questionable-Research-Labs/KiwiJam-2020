@@ -72,6 +72,7 @@ namespace UnityVRScripts {
             gunChargingAudioSource.pitch = startingPitch;
             gunChargingAudioSource.timeSamples = startingTimeSamples;
             gunChargingAudioSource.Play();
+            //XRController.SendHapticImpulse(0, 0.5f);
 
         }
         void TriggerUnpress(XRBaseInteractor interactor) {
@@ -81,7 +82,6 @@ namespace UnityVRScripts {
             Debug.Log(_currentCharge);
             if (_currentCharge >= gunMaxCharge) {
                 FireBullet();
-
             }
             else {
                 gunChargingAudioSource.timeSamples = gunChargingAudioSource.clip.samples - 1;

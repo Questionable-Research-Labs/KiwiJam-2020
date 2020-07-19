@@ -22,7 +22,10 @@ namespace UnityVRScripts {
         private bool currentlySpawning;
         private int spawningProgress;
 
-        private void SpawnSpider() {
+        public int test;
+
+        public void SpawnSpider() {
+            Debug.Log("");
             Instantiate(spiderPrefab, spawnLocations[UnityEngine.Random.Range(0,spawnLocations.Length)],Quaternion.identity );
         }
 
@@ -40,7 +43,10 @@ namespace UnityVRScripts {
                 lastWaveTime = Time.time;
                 spawningProgress = 0;
                 currentWave++;
+                Debug.Log("Starting wave");
             }
+
+            test = spiderCount;
         }
 
         public static void DecreaseSpiderCount() {

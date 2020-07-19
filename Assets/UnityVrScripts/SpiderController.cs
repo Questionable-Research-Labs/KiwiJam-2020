@@ -34,6 +34,8 @@ namespace UnityVRScripts {
         public float timeBetweenJumps;
         public float timeLastedJump;
 
+        public SpiderSpawner spiderSpawner;
+
         void Start() {
             rb = GetComponent<Rigidbody>();
             if (Random.Range(0, 2) == 0) {
@@ -96,6 +98,10 @@ namespace UnityVRScripts {
                 if (latched) {
                     UnlatchSpider(other.gameObject);
                 }
+            } else if (other.gameObject.CompareTag("OuterBox")) {
+                spiderSpawner.SpawnSpider();
+                Debug.Log("Respawned spider");
+                Destroy(gameObject);
             }
         }
 
@@ -105,5 +111,6 @@ namespace UnityVRScripts {
             rb.useGravity = true;
             lastLatch = Time.time;
         }
+        
     }
 }

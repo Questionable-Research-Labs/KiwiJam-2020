@@ -266,16 +266,12 @@ MonoBehaviour:
   spiderPrefab: {fileID: 1802493621590275194, guid: 771e6001194155141bf64bb649323d4e,
     type: 3}
   spawnLocations:
-  - {x: -3.11, y: -5.1, z: -18.49}
-  - {x: -3.11, y: -5.1, z: -19.99}
-  - {x: -1.206, y: -5.1, z: -19.99}
-  - {x: -1.206, y: -5.1, z: -21.1}
-  - {x: -1.206, y: -5.1, z: -16.339}
-  - {x: 13.56, y: -5.1, z: 13.56}
-  - {x: 13.56, y: -5.1, z: 15.02}
-  - {x: 16.67, y: -5.1, z: 10.29}
-  - {x: 13.46, y: -5.1, z: 10.29}
-  - {x: 10.4, y: -5.1, z: 10.29}
+  - {x: 18.6, y: -5, z: 14.6}
+  - {x: 18.6, y: -5, z: 12.8}
+  - {x: 18.6, y: -5, z: 10.7}
+  - {x: -4.98, y: -5, z: -15.9}
+  - {x: -4.98, y: -5, z: -18.2}
+  - {x: -4.98, y: -5, z: -21.2}
   waveSpiderAmounts: 0100000003000000050000000700000009000000
   waveSpiderTimes:
   - 10
@@ -284,7 +280,7 @@ MonoBehaviour:
   - 40
   - 30
   - 20
-  spiderSpawnDelay: 0
+  spiderSpawnDelay: 2
   currentWave: 0
 --- !u!4 &7973492
 Transform:
@@ -294,7 +290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7973490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4.98, y: -5, z: -15.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

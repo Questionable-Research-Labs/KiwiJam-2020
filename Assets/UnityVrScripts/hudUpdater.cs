@@ -16,7 +16,8 @@ namespace UnityVRScripts {
         private bool healthCritcalWarning = false;
 
         void Start() {
-            
+            AudioManager.PlaySound("g");
+
         }
 
         // Update is called once per frame

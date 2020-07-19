@@ -7,6 +7,7 @@ using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 
 namespace UnityVRScripts {
+    [RequireComponent(typeof(AudioSource))]
     public class GunManger : MonoBehaviour {
         public GameObject bulletPrefab;
         public static AudioSource gunChargingAudioSource;
@@ -38,10 +39,12 @@ namespace UnityVRScripts {
         }
         
         private void Update() {
-            if (Input.GetButton("XRI_Right_Trigger") && !triggerHeld) {
+            if (Input.GetAxis("XRI_Right_Trigger") < 0.5 && !triggerHeld) {
+
                 TriggerPress();
-            } else if (triggerHeld) {
+            } else if (Input.GetAxis("XRI_Right_Trigger") > 0.5 && triggerHeld) {
                 TriggerRelease();
+                
             }
             
             if (triggerHeld) {
@@ -53,7 +56,7 @@ namespace UnityVRScripts {
         }
 
         void FireBullet() {
-            Instantiate(bulletPrefab, transform.position, transform.rotation * Quaternion.Euler(90, 0, 0));
+            Instantiate(bulletPrefab, transform.position, transform.rotation * Quaternion.Euler(90, 180, 0));
             Debug.Log("Fired Bullet");
             ArdCom.TurnOnRightRelayForDuration(200);
 

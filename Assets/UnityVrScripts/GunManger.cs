@@ -63,7 +63,11 @@ namespace UnityVRScripts {
         }
 
         void FireBullet() {
-            testedgun = true;
+            if (!testedgun)
+            {
+                AudioManager.PlaySound("d");
+                testedgun = true;
+            }
 
             Instantiate(bulletPrefab, transform.position, transform.rotation * Quaternion.Euler(90, 180, 0));
             Debug.Log("Fired Bullet");

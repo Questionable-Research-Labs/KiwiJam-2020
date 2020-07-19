@@ -13,6 +13,8 @@ namespace UnityVRScripts {
         public Text dCBox; //dangerCompensation
         public Text goBox; //gameoverbox;
 
+        private bool healthCritcalWarning = false;
+
         void Start() {
             
         }
@@ -28,6 +30,9 @@ namespace UnityVRScripts {
             goBox.text = "";
             if (detectedHealth <= 0){
                 goBox.text = "Game Over!";
+            } else if (detectedHealth <= 5 && !healthCritcalWarning)
+            {
+                AudioManager.PlaySound("h");
             }
         }
 
